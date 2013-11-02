@@ -3,7 +3,7 @@
   <body>
     <div id="give_push" class="content">
       <div id="updatepic">
-        <input type="file" accept="image/*" ng-file-select="ng-file-select" style="padding-top:150px" class="mrleft"/>
+        <input type="file" accept="image/*" ng-file-select="ng-file-select" class="mrleft"/>
         <div ng-show="uploader.queue.length" class="mrleft">
           <div>
             <div class="progress progress-mini m-t-small">  
@@ -13,14 +13,10 @@
           </div>
         </div>
       </div>
-      <div ng-click="addTag($event)" ng-class="openthis? 'thing':''"><img src="{{mainPic}}" border="0;" class="photo"/>
+      <div ng-click="addTag($event)" ng-class="openthis? 'thing':'disthing'"><img src="{{mainPic}}" border="0;" class="photo"/>
         <div ng-repeat="tag in tags" style="top:{{tag.y}}%;left:{{tag.x}}%" class="tag"></div>
       </div>
       <div style="position:absolute"><img style="float:left;position:absolute;" src="http://maps.googleapis.com/maps/api/staticmap?zoom=16&amp;size=640x480&amp;sensor=false&amp;key=AIzaSyAEwpiQ0Bxihw4luyQ-CwvBj0luSFiyHJQ&amp;center=25.05735,121.61508&amp;markers=color:blue%7Clabel:X%7C25.05735,121.61508"/><a style="position:absolute;float:left;left:250px;top:250px;width:180px;text-align:center;height:50px;border:1px solid #777;border-radius:10px;background:#fff;opacity:.8;line-height:50px;cursor:pointer">這是您的地標</a></div>
-      <div style="width:50%;margin-left:25%;height:50px;background:#333;margin-top:-20px">請選擇檔案上傳
-        <input type="file" accept="image/*" ng-file-select="ng-file-select"/>
-      </div>
     </div>
-    <div><a ng-api="">儲存</a></div>
   </body>
 </html>
