@@ -3,9 +3,10 @@ html
     #want_group.content
       img.bg(src="./images/want_group_bg.png")
       .turntable(ng-class="'active-'+groupActive")
-        img.shadow(src="./images/want_group_turntable_shadow.jpg")
-        img(src="./images/want_group_turntable.jpg")
-        .group.group-a(ng-click="selectGroup('group-a')")
-        .group.group-b(ng-click="selectGroup('group-b')")
-        .group.group-c(ng-click="selectGroup('group-c')")
-        .group.group-d(ng-click="selectGroup('group-d')")
+        img(src="images/want_group_turntable_shadow.png")
+        .runrun
+          img(src="images/want_group_turntable.png")
+          .group.group-a(ng-click="selectGroup('group-a')")
+          .group.group-b(ng-click="selectGroup('group-b')")
+          .group.group-c(ng-click="selectGroup('group-c')")
+          .group.group-d(ng-click="selectGroup('group-d')")
