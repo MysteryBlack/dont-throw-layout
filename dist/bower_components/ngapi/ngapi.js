@@ -73,6 +73,7 @@ angular.module('ngapi',[])
         		var _data = _s.match(_d);
 
         		elem.bind('click',function(){
+        			console.log(scope);
         			if(!_d.test(_data[1]) && !_data[1].match(_dd) && !_data[2].match(_dd)){
 	        			var _tmpdata = apitools.reg.init(_data[1]);
 	        			var _tmpapi = apitools.reg.init(_data[2]);
@@ -162,11 +163,15 @@ angular.module('ngapi',[])
 							    });
 								break;
 							case 'restfullogin':
+
 								var _nonce = apitools.reg.specColon(_tmpapi[0])[1];
 								var _login = _tmpapi[1];
 								$http.get(apiroutes+_nonce).success(function (data) {
 							      	var password = apicrypto(_this.password);
 							      	var hash = apicrypto([password, data.data.nonce, apicnonce].sort().join(''));
+								    console.log(login);
+								    console.log(data.data.key);
+								    
 								    $http.post(apiroutes+_login,{
 								      	login: _this.user,
 								      	cnonce: apicnonce, 

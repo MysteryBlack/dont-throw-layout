@@ -1,6 +1,7 @@
-dont = angular.module("dont", ['ui.router'])
+dont = angular.module("dont", ['ui.router','ngapi'])
 
-dont.config ($stateProvider, $urlRouterProvider) ->
+dont.config ($stateProvider, $urlRouterProvider, $httpProvider) ->
+  delete $httpProvider.defaults.headers.common['X-Requested-With']
   $urlRouterProvider.otherwise("/home")
   $stateProvider
     .state 'home',
@@ -86,6 +87,13 @@ dont.config ($stateProvider, $urlRouterProvider) ->
           controller: 'GivePreviewCtrl'
 
 dont.controller "DocumentCtrl", ($scope, $state) ->
+  $scope.yoyo = () -> console.log($scope.pass)
   $scope.view = 'home'
   $scope.$on '$stateChangeStart', (event, toState, toParams, fromState, fromParams) ->
     $scope.view = 'view-'+toState.name
+
+dont.constant('apiurl','http://api.dont-throw.com')
+dont.constant('apicnonce','cnonce') 
+dont.constant('apivalidate',{})
+
+
