@@ -1,3 +1,5 @@
+dont = angular.module("dont", [])
+
 dont.config ($stateProvider, $urlRouterProvider) ->
   $urlRouterProvider.otherwise("/state1")
   $stateProvider
