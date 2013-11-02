@@ -86,10 +86,18 @@ dont.config ($stateProvider, $urlRouterProvider, $httpProvider) ->
           templateUrl: "views/give_preview.html"
           controller: 'GivePreviewCtrl'
 
-dont.run ($rootScope, $state) ->
+dont.run ($rootScope, $state, ThingsSvc) ->
   $rootScope.view = 'home'
   $rootScope.$on '$stateChangeStart', (event, toState, toParams, fromState, fromParams) ->
     $rootScope.view = 'view-'+toState.name
+    ThingsSvc.update (() -> $rootScope.$apply() unless $rootScope.$$phase) if toState.name is 'want_list'
+
+dont.filter 'selected', () ->
+  (input) ->
+    res = []
+    angular.forEach input, (item, key) -> 
+      res.push(item) if item.selected
+    return res
 
 dont.constant('apiurl','http://api.dont-throw.com')
 dont.constant('apicnonce','cnonce') 

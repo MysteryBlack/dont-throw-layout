@@ -116,11 +116,31 @@ dont.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   });
 });
 
-dont.run(function($rootScope, $state) {
+dont.run(function($rootScope, $state, ThingsSvc) {
   $rootScope.view = 'home';
   return $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
-    return $rootScope.view = 'view-' + toState.name;
+    $rootScope.view = 'view-' + toState.name;
+    if (toState.name === 'want_list') {
+      return ThingsSvc.update((function() {
+        if (!$rootScope.$$phase) {
+          return $rootScope.$apply();
+        }
+      }));
+    }
   });
+});
+
+dont.filter('selected', function() {
+  return function(input) {
+    var res;
+    res = [];
+    angular.forEach(input, function(item, key) {
+      if (item.selected) {
+        return res.push(item);
+      }
+    });
+    return res;
+  };
 });
 
 dont.constant('apiurl', 'http://api.dont-throw.com');

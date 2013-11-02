@@ -1,4 +1,13 @@
 html
   body
     #want_detail.content
-      img(src="http://maps.googleapis.com/maps/api/staticmap?zoom=16&size=640x480&sensor=false&key=AIzaSyAEwpiQ0Bxihw4luyQ-CwvBj0luSFiyHJQ&center=25.05735,121.61508&markers=color:blue%7Clabel:X%7C25.05735,121.61508")
+      .tag(ng-repeat="tag in tags | selected")
+        img(src="images/transparent.png")
+        .photo
+          .wrap-img
+            img(src="{{tag.photo}}",style="top:-{{tag.y}}%;left:-{{tag.x}}%")
+
+      img(src="http://maps.googleapis.com/maps/api/staticmap?zoom=16&size=640x240&sensor=false&key=AIzaSyAEwpiQ0Bxihw4luyQ-CwvBj0luSFiyHJQ&center=25.05735,121.61508&markers=color:blue%7Clabel:X%7C25.05735,121.61508")
+
+      a.submit(href="#/want_complete")
+        img(src="images/want_detail_submit.png")
