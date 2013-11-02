@@ -20,10 +20,15 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/ngapi/ngapi.min.js"></script>
+    <!-- build:js(app) scripts/controller.js-->
+    <script src="scripts/controllers/home.js"></script>
+    <script src="scripts/controllers/login.js"></script>
+    <script src="scripts/controllers/choose.js"></script>
+    <script src="scripts/controllers/want_group.js"></script>
     <script src="scripts/app.js"></script>
   </head>
-  <body ng-app="dont">
-    <div ui-view="main"></div>
-    <div ui-view="menu"></div>
+  <body ng-app="dont"><a ui-sref="home">Home</a><a ui-sref="login">Login</a><a ui-sref="choose">choose</a><a ui-sref="Want_Group">Want_Group</a>
+    <div id="head" ui-view="head"></div>
+    <div id="main" ui-view="main"></div>
   </body>
 </html>

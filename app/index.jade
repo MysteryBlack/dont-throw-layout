@@ -19,10 +19,17 @@ html
     script(src='bower_components/angular-sanitize/angular-sanitize.js')
     script(src='bower_components/angular-ui-router/release/angular-ui-router.min.js')
     script(src='bower_components/ngapi/ngapi.min.js')
+    // build:js(app) scripts/controller.js
+    script(src='scripts/controllers/home.js')
+    script(src='scripts/controllers/login.js')
+    script(src='scripts/controllers/choose.js')
+    script(src='scripts/controllers/want_group.js')
 
     script(src='scripts/app.js')
   body(ng-app="dont")
-    //- <a ui-sref="route1">Route 1</a>
-    //- <a ui-sref="route2">Route 2</a>
-    div(ui-view="main")
-    div(ui-view="menu")
+    a(ui-sref="home") Home
+    a(ui-sref="login") Login
+    a(ui-sref="choose") choose
+    a(ui-sref="Want_Group") Want_Group
+    #head(ui-view="head")
+    #main(ui-view="main")
