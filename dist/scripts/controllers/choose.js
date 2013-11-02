@@ -1,4 +1,4 @@
-dont.controller("GivePushCtrl", function($scope) {
+dont.controller("ChooseCtrl", function($scope) {
   $scope.tid = null;
   $scope.progress = null;
   return $scope.status = 'output';
