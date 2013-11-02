@@ -1,9 +1,22 @@
 
 <html>
   <body>
-    <div id="give_push" class="content">
-      <div ng-click="addTag($event)" class="thing"><img src="images/login_bg.jpg" border="0" class="photo"/>
+    <div id="give_push" style="margin-top:200px" class="content">
+      <div ng-click="addTag($event)" class="thing"><img src="{{updatelists}}" border="0;" class="photo"/>
         <div ng-repeat="tag in tags" style="top:{{tag.y}}%;left:{{tag.x}}%" class="tag"></div>
+        <input type="file" accept="image/*" ng-file-select="ng-file-select"/>
+      </div>
+    </div>
+    <ul>
+      <li>
+        <div>Name: {{ item.file.name }} or Size: {{ item.file.size }} <a>delete</a></div>
+      </li>
+    </ul>
+    <div ng-show="uploader.queue.length">
+      <div>
+        <div class="progress progress-mini m-t-small">  
+          <div ng-style="{ 'width': uploader.progress + '%' }" class="progress-bar progress-bar-info"></div>
+        </div><span class="badge">{{ uploader.queue.length }} files will update</span><a href="" ng-click="uploader.uploadAll()" ng-show="uploader.getNotUploadedItems().length" class="btn btn-white btn-default">upload all</a><a href="" ng-click="uploader.clearQueue()" class="btn btn-white btn-default">delete all</a>
       </div>
     </div>
   </body>

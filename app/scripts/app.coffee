@@ -1,4 +1,4 @@
-dont = angular.module("dont", ['ui.router','ngapi'])
+dont = angular.module("dont", ['ui.router','ngapi','files'])
 
 dont.config ($stateProvider, $urlRouterProvider, $httpProvider) ->
   delete $httpProvider.defaults.headers.common['X-Requested-With']

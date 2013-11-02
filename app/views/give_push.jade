@@ -1,6 +1,18 @@
 html
   body
-    #give_push.content
+    #give_push.content(style="margin-top:200px")
       .thing(ng-click="addTag($event)")
-        img.photo(src="images/login_bg.jpg",border="0")
+        img.photo(src="{{updatelists}}",border="0;")
         .tag(ng-repeat="tag in tags",style="top:{{tag.y}}%;left:{{tag.x}}%")
+        input(type="file",accept="image/*",ng-file-select)
+    ul
+      li
+        div Name: {{ item.file.name }} or Size: {{ item.file.size }} 
+          a delete
+    div(ng-show="uploader.queue.length")
+      div
+        div.progress.progress-mini.m-t-small   
+          div.progress-bar.progress-bar-info(ng-style="{ 'width': uploader.progress + '%' }")
+        span.badge {{ uploader.queue.length }} files will update
+        a.btn.btn-white.btn-default(href="",ng-click="uploader.uploadAll()",ng-show="uploader.getNotUploadedItems().length") upload all
+        a.btn.btn-white.btn-default(href="",ng-click="uploader.clearQueue()") delete all
