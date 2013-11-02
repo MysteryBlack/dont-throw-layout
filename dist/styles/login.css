@@ -1,5 +1,6 @@
+.content{width:100%;margin:0 auto}
 #login{position:relative;}
 #login .bg{width:100%}
 #login .box{position:absolute;left:0;top:40%;width:100%;}
-#login .box input,#login .box button.yahoo{width:80%;max-width:57mm;height:8mm;border:.51mm solid #000;margin:0 auto;display:block;margin-top:3mm;background:none}
+#login .box input,#login .box button{width:80%;max-width:57mm;height:8mm;border:.51mm solid #000;margin:0 auto;display:block;margin-top:3mm;background:none;clear:both}
 #login .box button.yahoo{border:none;background-image:url("../images/login_btn_yahoo.jpg");background-position:center center;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;background-repeat:no-repeat}

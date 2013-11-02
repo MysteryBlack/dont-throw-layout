@@ -1,8 +1,16 @@
 dont.controller("GivePushCtrl", function($scope) {
-  $scope.thingSize = 100;
-  return $scope.drawThing = function(e) {
-    console.log(e);
-    return $scope.thingSize = $('#give_push .thine').width();
+  $scope.tags = [];
+  return $scope.addTag = function(e) {
+    var offsetX, offsetY;
+    offsetX = e.offsetX / $(e.target).width() * 100;
+    offsetY = e.offsetY / $(e.target).height() * 100;
+    console.log(offsetX);
+    console.log(offsetY);
+    $scope.tags.push({
+      x: offsetX,
+      y: offsetY
+    });
+    return console.log($scope.tags);
   };
 });
 

@@ -1,5 +1,6 @@
 html
   body
     #give_push.content
-      .thing
+      .thing(ng-click="addTag($event)")
         img.photo(src="images/login_bg.jpg",border="0")
+        .tag(ng-repeat="tag in tags",style="top:{{tag.y}}%;left:{{tag.x}}%")
