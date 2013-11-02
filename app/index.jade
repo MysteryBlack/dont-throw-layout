@@ -28,6 +28,9 @@ html
     script(src='bower_components/hello/src/hello.js')    
     script(src='scripts/app.js')
   body(ng-app="dont")
+    
+    button(onclick="hello( 'yahoo' ).login()") yahoo
+
     a(ui-sref="home") Home
     a(ui-sref="login") Login
     a(ui-sref="choose") choose
