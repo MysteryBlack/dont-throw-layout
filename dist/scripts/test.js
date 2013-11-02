@@ -131,7 +131,7 @@ var YAHOO_CLI_ID = {
 }[window.location.hostname];
 
 hello.init({ 
-		yahoo   : YAHOO_CLI_ID
+		yahoo   : YAHOO_CLI_ID['dont-throw-layout']
 	},{redirect_uri:'test.html'});
 
 hello.on('auth.login', function(auth){
