@@ -1,3 +1,9 @@
 html
   body
-    svg#svg(ng-init="drawGroup()",style="width:400px;height:400px")
+    #want_group.content
+      .turntable(ng-class="'active-'+groupActive")
+        img(src="./images/want_group_turntable.jpg")
+        .group.group-a(ng-click="selectGroup('group-a')")
+        .group.group-b(ng-click="selectGroup('group-b')")
+        .group.group-c(ng-click="selectGroup('group-c')")
+        .group.group-d(ng-click="selectGroup('group-d')")

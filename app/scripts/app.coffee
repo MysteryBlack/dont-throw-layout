@@ -95,5 +95,3 @@ dont.controller "DocumentCtrl", ($scope, $state) ->
 dont.constant('apiurl','http://api.dont-throw.com')
 dont.constant('apicnonce','cnonce') 
 dont.constant('apivalidate',{})
-
-

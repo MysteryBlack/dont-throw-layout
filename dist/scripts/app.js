@@ -116,19 +116,7 @@ dont.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   });
 });
 
-dont.controller("DocumentCtrl", function($scope, $state,$http) {
-  $http.defaults.useXDomain = true;
-  // $http.post('http://127.0.0.1:3000/api/user/signup',{
-  //     password: '1234',
-  //     login: 'test223',
-  //     email:'admin1@test.com',
-  //     display:'test'
-  //   }).success(function(data){
-  //     console.log('======');
-  //     console.log(data);
-  //     console.log('======');
-  //   })
-
+dont.controller("DocumentCtrl", function($scope, $state) {
   $scope.yoyo = function() {
     return console.log($scope.pass);
   };
@@ -138,7 +126,7 @@ dont.controller("DocumentCtrl", function($scope, $state,$http) {
   });
 });
 
-dont.constant('apiurl', 'http://127.0.0.1:3000');
+dont.constant('apiurl', 'http://api.dont-throw.com');
 
 dont.constant('apicnonce', 'cnonce');
 

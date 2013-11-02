@@ -1,6 +1,13 @@
 
 <html>
   <body>
-    <svg id="svg" ng-init="drawGroup()" style="width:400px;height:400px"></svg>
+    <div id="want_group" class="content">
+      <div ng-class="'active-'+groupActive" class="turntable"><img src="./images/want_group_turntable.jpg"/>
+        <div ng-click="selectGroup('group-a')" class="group group-a"></div>
+        <div ng-click="selectGroup('group-b')" class="group group-b"></div>
+        <div ng-click="selectGroup('group-c')" class="group group-c"></div>
+        <div ng-click="selectGroup('group-d')" class="group group-d"></div>
+      </div>
+    </div>
   </body>
 </html>
