@@ -1,3 +1,6 @@
-#give_push .thing{width:90%;margin:0 auto;max-width:600px;position:relative;}
+#give_push .thing{width:90%;margin:0 auto;max-width:600px;position:relative;position:absolute;top:0;width:100%;height:400px;background:#fff;}
 #give_push .thing .photo{width:100%}
 #give_push .thing .tag{position:absolute;left:0;top:0;width:60px;height:20px;background:#0f0}
+#give_push .badge{color:#aaa;text-align:center}
+#give_push .mrleft{margin-left:25%}
+#give_push #updatepic{width:100%;height:400px;background:#000}

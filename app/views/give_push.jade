@@ -1,18 +1,25 @@
 html
   body
-    #give_push.content(style="margin-top:200px")
-      .thing(ng-click="addTag($event)")
-        img.photo(src="{{updatelists}}",border="0;")
+    #give_push.content
+      div#updatepic
+        input(type="file",accept="image/*",ng-file-select,style="padding-top:150px",class="mrleft")
+        div(ng-show="uploader.queue.length",class="mrleft")
+          div
+            div.progress.progress-mini.m-t-small   
+              div.progress-bar.progress-bar-info(ng-style="{ 'width': uploader.progress + '%' }")
+            span.badge {{ uploader.queue.length }} files will update
+            div
+              a.btn.btn-white.btn-default(href="",ng-click="uploader.uploadAll()",ng-show="uploader.getNotUploadedItems().length",class="btn-gradient cyan") upload
+              a.btn.btn-white.btn-default(href="",ng-click="uploader.clearQueue()",class="btn-gradient red") delete
+
+      div(ng-click="addTag($event)",ng-class="openthis? 'thing':''")
+        img.photo(src="{{mainPic}}",border="0;")
         .tag(ng-repeat="tag in tags",style="top:{{tag.y}}%;left:{{tag.x}}%")
+      div(style="position:absolute")
+        img(style="float:left;position:absolute;",src="http://maps.googleapis.com/maps/api/staticmap?zoom=16&size=640x480&sensor=false&key=AIzaSyAEwpiQ0Bxihw4luyQ-CwvBj0luSFiyHJQ&center=25.05735,121.61508&markers=color:blue%7Clabel:X%7C25.05735,121.61508")
+        a(style="position:absolute;float:left;left:250px;top:250px;width:180px;text-align:center;height:50px;border:1px solid #777;border-radius:10px;background:#fff;opacity:.8;line-height:50px;cursor:pointer") 這是您的地標
+      div(style="width:50%;margin-left:25%;height:50px;background:#333;margin-top:-20px") 請選擇檔案上傳
         input(type="file",accept="image/*",ng-file-select)
-    ul
-      li
-        div Name: {{ item.file.name }} or Size: {{ item.file.size }} 
-          a delete
-    div(ng-show="uploader.queue.length")
-      div
-        div.progress.progress-mini.m-t-small   
-          div.progress-bar.progress-bar-info(ng-style="{ 'width': uploader.progress + '%' }")
-        span.badge {{ uploader.queue.length }} files will update
-        a.btn.btn-white.btn-default(href="",ng-click="uploader.uploadAll()",ng-show="uploader.getNotUploadedItems().length") upload all
-        a.btn.btn-white.btn-default(href="",ng-click="uploader.clearQueue()") delete all
+
+    div
+      a(ng-api="") 儲存

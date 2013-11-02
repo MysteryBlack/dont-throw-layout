@@ -1,6 +1,7 @@
 dont.controller "GivePushCtrl", ($scope,$fileUploader) ->
   $scope.tags = []
-  $scope.updatelists = '';
+  $scope.picPool = []
+  $scope.mainPic = ""  if $scope.picPool.length is 0
   $scope.addTag = (e) ->
     offsetX = e.offsetX / $(e.target).width() * 100
     offsetY = e.offsetY / $(e.target).height() * 100
@@ -46,7 +47,8 @@ dont.controller "GivePushCtrl", ($scope,$fileUploader) ->
     $scope.picPool.push
       u: _x.n
       m: 0
-
+    $scope.mainPic = 'https://s3-us-west-2.amazonaws.com/dont-throw/'+$scope.picPool[0].u
+    $scope.openthis = true
     $scope.oi = false
     console.log $scope.picPool[0]
     _ym = 0

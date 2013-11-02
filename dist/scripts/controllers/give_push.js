@@ -1,7 +1,10 @@
 dont.controller("GivePushCtrl", function($scope, $fileUploader) {
   var uploader;
   $scope.tags = [];
-  $scope.updatelists = '';
+  $scope.picPool = [];
+  if ($scope.picPool.length === 0) {
+    $scope.mainPic = "";
+  }
   $scope.addTag = function(e) {
     var offsetX, offsetY;
     offsetX = e.offsetX / $(e.target).width() * 100;
@@ -35,6 +38,8 @@ dont.controller("GivePushCtrl", function($scope, $fileUploader) {
       u: _x.n,
       m: 0
     });
+    $scope.mainPic = 'https://s3-us-west-2.amazonaws.com/dont-throw/' + $scope.picPool[0].u;
+    $scope.openthis = true;
     $scope.oi = false;
     console.log($scope.picPool[0]);
     _ym = 0;
