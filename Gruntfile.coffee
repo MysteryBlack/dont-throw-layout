@@ -50,13 +50,13 @@ module.exports = (grunt) ->
         ]
     concurrent:
       dist: ["jade","coffee","stylus"]
-    clean: ["share/web"]
+    clean: ["<%= app.dist %>"]
     copy: 
       main: 
         files: [
           {expand: true, src: ['bower_components/**'], dest: "<%= app.dist %>"}
-          {expand: true, cwd:'app/', src: ['images/**'], dest: "<%= app.dist %>"}
-          {expand: true, cwd:'app/', src: ['*.ico','{,**/}*.js','{,**/}*.css','{,**/}*.html'], dest: "<%= app.dist %>"}
+          {expand: true, cwd:'<%= app.dev %>/', src: ['images/**'], dest: "<%= app.dist %>"}
+          {expand: true, cwd:'<%= app.dev %>/', src: ['*.ico','{,**/}*.js','{,**/}*.css','{,**/}*.html'], dest: "<%= app.dist %>"}
         ]
     watch:
       jade:

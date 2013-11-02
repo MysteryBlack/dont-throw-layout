@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
+
+<script>alert(window.location.href)</script>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="./favicon.ico">
@@ -28,10 +30,10 @@
     <script src="scripts/controllers/login.js"></script>
     <script src="scripts/controllers/choose.js"></script>
     <script src="scripts/controllers/want_group.js"></script>
-    <script src="scripts/test.js"></script>
+    <link type="text/css" rel="stylesheet" href="styles/dont.css">
+    <link type="text/css" rel="stylesheet" href="styles/home.css">
   </head>
-  <body ng-app="dont">
-    <button onclick="hello.login('yahoo')">yahoo</button><a ui-sref="home">Home</a><a ui-sref="login">Login</a><a ui-sref="choose">choose</a><a ui-sref="want_group">Want_Group</a>
+  <body ng-app="dont" ng-controller="DocumentCtrl" ng-class="view"><a ui-sref="home">Home</a><a ui-sref="login">Login</a><a ui-sref="choose">choose</a><a ui-sref="want_group">Want_Group</a>
     <div id="head" ui-view="head"></div>
     <div id="main" ui-view="main"></div>
   </body>

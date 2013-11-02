@@ -65,6 +65,13 @@ dont.config(function($stateProvider, $urlRouterProvider) {
   });
 });
 
+dont.controller("DocumentCtrl", function($scope, $state) {
+  $scope.view = 'home';
+  return $scope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+    return $scope.view = 'view-' + toState.name;
+  });
+});
+
 /*
 //@ sourceMappingURL=app.js.map
 */
