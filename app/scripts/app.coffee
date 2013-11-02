@@ -38,6 +38,14 @@ dont.config ($stateProvider, $urlRouterProvider) ->
             $scope.things = ["A", "Set", "Of", "Things"]
     .state 'want_group',
       url: "/want_group"
+      views:
+        head:
+          templateUrl: "views/head.html"
+          controller: ($scope) ->
+            $scope.things = ["A", "Set", "Of", "Things"]
+        main:
+          templateUrl: "views/want_group.html"
+          controller: 'WantGroupCtrl'
     .state 'want_list',
       url: "/want_list"
     .state 'want_detail',

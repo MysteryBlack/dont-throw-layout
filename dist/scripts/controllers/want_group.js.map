@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "want_group.js",
+  "sourceRoot": "",
+  "sources": [
+    "want_group.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA,CAAI,CAA4B,CAA7B,GAA6B,GAAC,CAAjC,KAAA;CACE,CAAA,CAAA,CAAA,EAAM;CAAN,CACA,CAAkB,CADlB,EACM,EAAN;CACO,EAAS,GAAV,GAAN;CAH8B"
+}
