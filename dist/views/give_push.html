@@ -2,7 +2,7 @@
 <html>
   <body>
     <div id="give_push" class="content">
-      <div id="updatepic">
+      <div id="updatepic" ng-hide="openthis">
         <p class="h11">點選新增圖片</p>
         <input type="file" accept="image/*" ng-file-select="ng-file-select" style="margin-top:-50%;width:50%;border:2px dotted #fff;background:#fff;opacity:.8" class="mrleft"/>
         <div ng-show="uploader.queue.length" class="mrleft">
@@ -11,11 +11,12 @@
           </div>
         </div>
       </div>
-      <div ng-click="addTag($event)" ng-class="openthis? 'thing':'disthing'"><img src="{{mainPic}}" style="" class="photo"/>
-        <div ng-repeat="tag in tags" style="top:{{tag.y}}%;left:{{tag.x}}%" class="tag">{{tag.name}} <img src="/images/tagclose.png" style="float:left;width:40px"/></div>
+      <div ng-click="addTag($event)" ng-show="openthis" class="thing"><img src="{{mainPic}}" class="photo"/>
+        <div ng-repeat="tag in tags" style="top:{{tag.y}}%;left:{{tag.x}}%" class="tag"><span>{{tag.name}} </span>
+          <div ng-click="removeTag($event, tag)" class="remove"></div>
+        </div>
       </div>
-      <div><img src="/images/finishtag.png" ng-class="clicktag?'openthis':'closethis'" ng-click="finishtag()" class="finishtag"/></div>
-      <div style="position:absolute"><img style="float:left;position:absolute;" src="http://maps.googleapis.com/maps/api/staticmap?zoom=16&amp;size=640x480&amp;sensor=false&amp;key=AIzaSyAEwpiQ0Bxihw4luyQ-CwvBj0luSFiyHJQ&amp;center=25.05735,121.61508&amp;markers=color:blue%7Clabel:X%7C25.05735,121.61508"/><a style="position:absolute;float:left;left:250px;top:250px;width:180px;text-align:center;height:50px;border:1px solid #777;border-radius:10px;background:#fff;opacity:.8;line-height:50px;cursor:pointer">這是您的地標</a></div>
+      <div class="map"><img src="/images/finishtag.png" ng-show="tags.length" ng-click="finishtag()" class="finishtag"/><img style="float:left;position:absolute;" src="http://maps.googleapis.com/maps/api/staticmap?zoom=16&amp;size=640x240&amp;sensor=false&amp;key=AIzaSyAEwpiQ0Bxihw4luyQ-CwvBj0luSFiyHJQ&amp;center=25.05735,121.61508&amp;markers=color:blue%7Clabel:X%7C25.05735,121.61508"/></div>
     </div>
   </body>
 </html>
