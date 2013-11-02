@@ -6,5 +6,5 @@
     "want_complete.coffee"
   ],
   "names": [],
-  "mappings": "AAAA,CAAK,CAA+B,CAAA,CAAhC,EAAgC,GAAC,CAArC,QAAA;CACS,EAAO,CAAd,EAAM,GAAN;CADkC"
+  "mappings": "AAAA,CAAK,CAA+B,CAAA,CAAhC,EAAgC,GAAC,CAArC,QAAA;CACS,EAAO,CAAd,CAAc,CAAR,GAAN;CADkC"
 }

@@ -1,1 +1,7 @@
-#want_detail{width:100%}
+#want_detail .tag{position:relative;width:20%;margin-left:4%;display:inline-block;}
+#want_detail .tag img{width:100%}
+#want_detail .tag .photo{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;}
+#want_detail .tag .photo .wrap-img,#want_detail .tag .photo img{position:absolute;width:600px;height:600px;top:0;left:0}
+#want_detail .tag .photo .wrap-img{margin-left:50%;margin-top:50%}
+#want_detail .submit{width:50%;display:block;margin:0 auto;}
+#want_detail .submit img{width:100%}

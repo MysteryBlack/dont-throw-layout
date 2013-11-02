@@ -1,31 +1,4 @@
-dont.controller "WantListCtrl", ($scope) ->
-  $scope.tags = [
-    {
-      photo: './'
-      x: 30
-      y: 40
-      name: 'testA'
-      position: '50'
-    },
-    {
-      photo: './'
-      x: 30
-      y: 40
-      name: 'testB'
-      position: '50'
-    },
-    {
-      photo: './'
-      x: 30
-      y: 40
-      name: 'testC'
-      position: '50'
-    },
-    {
-      photo: './'
-      x: 30
-      y: 40
-      name: 'testD'
-      position: '50'
-    }
-  ]
+dont.controller "WantListCtrl", ($scope, ThingsSvc) ->
+  $scope.tags = ThingsSvc.fetch()
+  $scope.select = (item) ->
+    item.selected = !item.selected

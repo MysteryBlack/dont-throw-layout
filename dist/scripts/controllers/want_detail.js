@@ -1,5 +1,5 @@
-dont.controller("WantDetailCtrl", function($scope) {
-  return $scope.tags = [];
+dont.controller("WantDetailCtrl", function($scope, ThingsSvc) {
+  return $scope.tags = ThingsSvc.fetch();
 });
 
 /*

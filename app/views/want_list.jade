@@ -1,10 +1,10 @@
 html
   body
     #want_list.content
-      .tag(ng-repeat="tag in tags")
+      .tag(ng-repeat="tag in tags",ng-click="select(tag)",ng-class="{'active': tag.selected}")
         .photo
           .wrap-img
-            img(src="images/demo.jpg",style="top:-{{tag.y}}%;left:-{{tag.x}}%")
+            img(src="{{tag.photo}}",style="top:-{{tag.y}}%;left:-{{tag.x}}%")
         .wrap
           .name {{tag.name}}
-          .position {{tag.position}}
+          .position {{tag.position}}m

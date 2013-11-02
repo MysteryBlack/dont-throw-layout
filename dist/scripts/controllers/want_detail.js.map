@@ -6,5 +6,5 @@
     "want_detail.coffee"
   ],
   "names": [],
-  "mappings": "AAAA,CAAK,CAA6B,CAAA,CAA9B,EAA8B,GAAC,CAAnC,MAAA;CACS,EAAO,CAAd,EAAM,GAAN;CADgC"
+  "mappings": "AAAA,CAAK,CAA6B,CAAA,CAA9B,EAA8B,GAAC,CAAnC,MAAA;CACS,EAAO,CAAd,CAAc,CAAR,GAAN;CADgC"
 }

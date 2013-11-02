@@ -1,2 +1,2 @@
-dont.controller "WantCompleteCtrl", ($scope) ->
-  $scope.tags = []
+dont.controller "WantCompleteCtrl", ($scope, ThingsSvc) ->
+  $scope.tags = ThingsSvc.fetch()
