@@ -1,7 +1,7 @@
 dont = angular.module("dont", ['ui.router'])
 
 dont.config ($stateProvider, $urlRouterProvider) ->
-  $urlRouterProvider.otherwise("/state1")
+  $urlRouterProvider.otherwise("/home")
   $stateProvider
     .state 'home',
       url: "/home",
