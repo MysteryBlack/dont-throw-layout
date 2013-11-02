@@ -9,15 +9,11 @@ dont.config(function($stateProvider, $urlRouterProvider) {
     views: {
       head: {
         templateUrl: "views/head.html",
-        controller: function($scope) {
-          return $scope.things = ["A", "Set", "Of", "Things"];
-        }
+        controller: 'HeadCtrl'
       },
       main: {
         templateUrl: "views/home.html",
-        controller: function($scope) {
-          return $scope.things = ["A", "Set", "Of", "Things"];
-        }
+        controller: 'HomeCtrl'
       }
     }
   }).state('login', {
@@ -25,15 +21,11 @@ dont.config(function($stateProvider, $urlRouterProvider) {
     views: {
       head: {
         templateUrl: "views/head.html",
-        controller: function($scope) {
-          return $scope.things = ["A", "Set", "Of", "Things"];
-        }
+        controller: 'HeadCtrl'
       },
       main: {
         templateUrl: "views/login.html",
-        controller: function($scope) {
-          return $scope.things = ["A", "Set", "Of", "Things"];
-        }
+        controller: 'LoginCtrl'
       }
     }
   }).state('choose', {
@@ -41,15 +33,11 @@ dont.config(function($stateProvider, $urlRouterProvider) {
     views: {
       head: {
         templateUrl: "views/head.html",
-        controller: function($scope) {
-          return $scope.things = ["A", "Set", "Of", "Things"];
-        }
+        controller: 'HeadCtrl'
       },
       main: {
         templateUrl: "views/choose.html",
-        controller: function($scope) {
-          return $scope.things = ["A", "Set", "Of", "Things"];
-        }
+        controller: 'ChooseCtrl'
       }
     }
   }).state('want_group', {
@@ -57,9 +45,7 @@ dont.config(function($stateProvider, $urlRouterProvider) {
     views: {
       head: {
         templateUrl: "views/head.html",
-        controller: function($scope) {
-          return $scope.things = ["A", "Set", "Of", "Things"];
-        }
+        controller: 'HeadCtrl'
       },
       main: {
         templateUrl: "views/want_group.html",

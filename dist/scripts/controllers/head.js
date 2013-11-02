@@ -1,9 +1,9 @@
-dont.controller("ChooseCtrl", function($scope) {
+dont.controller("HeadCtrl", function($scope) {
   $scope.tid = null;
   $scope.progress = null;
   return $scope.status = 'output';
 });
 
 /*
-//@ sourceMappingURL=choose.js.map
+//@ sourceMappingURL=head.js.map
 */

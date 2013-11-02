@@ -8,41 +8,34 @@ dont.config ($stateProvider, $urlRouterProvider) ->
       views:
         head:
           templateUrl: "views/head.html"
-          controller: ($scope) ->
-            $scope.things = ["A", "Set", "Of", "Things"]
+          controller: 'HeadCtrl'
         main:
           templateUrl: "views/home.html"
-          controller: ($scope) ->
-            $scope.things = ["A", "Set", "Of", "Things"]
+          controller: 'HomeCtrl'
     .state 'login',
       url: "/login",
       views:
         head:
           templateUrl: "views/head.html"
-          controller: ($scope) ->
-            $scope.things = ["A", "Set", "Of", "Things"]
+          controller: 'HeadCtrl'
         main:
           templateUrl: "views/login.html"
-          controller: ($scope) ->
-            $scope.things = ["A", "Set", "Of", "Things"]
+          controller: 'LoginCtrl'
     .state 'choose',
       url: "/choose"
       views:
         head:
           templateUrl: "views/head.html"
-          controller: ($scope) ->
-            $scope.things = ["A", "Set", "Of", "Things"]
+          controller: 'HeadCtrl'
         main:
           templateUrl: "views/choose.html"
-          controller: ($scope) ->
-            $scope.things = ["A", "Set", "Of", "Things"]
+          controller: 'ChooseCtrl'
     .state 'want_group',
       url: "/want_group"
       views:
         head:
           templateUrl: "views/head.html"
-          controller: ($scope) ->
-            $scope.things = ["A", "Set", "Of", "Things"]
+          controller: 'HeadCtrl'
         main:
           templateUrl: "views/want_group.html"
           controller: 'WantGroupCtrl'

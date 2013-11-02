@@ -1,9 +1,9 @@
 {
   "version": 3,
-  "file": "home.js",
+  "file": "head.js",
   "sourceRoot": "",
   "sources": [
-    "home.coffee"
+    "head.coffee"
   ],
   "names": [],
   "mappings": "AAAA,CAAK,CAAuB,CAAA,CAAxB,EAAwB,GAAC,CAA7B;CACE,CAAA,CAAA,CAAA,EAAM;CAAN,CACA,CAAkB,CADlB,EACM,EAAN;CACO,EAAS,GAAV,GAAN;CAH0B"

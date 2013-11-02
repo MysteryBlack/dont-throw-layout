@@ -1,4 +1,4 @@
-dont.controller "HomeCtrl", ($scope) ->
+dont.controller "HeadCtrl", ($scope) ->
   $scope.tid = null
   $scope.progress = null
   $scope.status = 'output'

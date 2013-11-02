@@ -19,14 +19,16 @@ html
     script(src='bower_components/angular-sanitize/angular-sanitize.js')
     script(src='bower_components/angular-ui-router/release/angular-ui-router.min.js')
     script(src='bower_components/ngapi/ngapi.min.js')
+    script(src='bower_components/hello/src/hello.js')    
+    
+    script(src='scripts/app.js')
+
     // build:js(app) scripts/controller.js
+    script(src='scripts/controllers/head.js')
     script(src='scripts/controllers/home.js')
     script(src='scripts/controllers/login.js')
     script(src='scripts/controllers/choose.js')
     script(src='scripts/controllers/want_group.js')
-
-    script(src='bower_components/hello/src/hello.js')    
-    script(src='scripts/app.js')
   body(ng-app="dont")
     
     button(onclick="hello( 'yahoo' ).login()") yahoo
@@ -34,6 +36,6 @@ html
     a(ui-sref="home") Home
     a(ui-sref="login") Login
     a(ui-sref="choose") choose
-    a(ui-sref="Want_Group") Want_Group
+    a(ui-sref="want_group") Want_Group
     #head(ui-view="head")
     #main(ui-view="main")

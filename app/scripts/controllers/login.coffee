@@ -1,3 +1,3 @@
-app.controller "LoginCtrl", ($scope) ->
+dont.controller "LoginCtrl", ($scope) ->
   $scope.items = []
   $scope.limit = 0

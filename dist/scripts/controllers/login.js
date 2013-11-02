@@ -1,4 +1,4 @@
-app.controller("LoginCtrl", function($scope) {
+dont.controller("LoginCtrl", function($scope) {
   $scope.items = [];
   return $scope.limit = 0;
 });
