@@ -1,6 +1,6 @@
 var dont;
 
-dont = angular.module("dont", []);
+dont = angular.module("dont", ['ui.router']);
 
 dont.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/state1");
@@ -8,13 +8,13 @@ dont.config(function($stateProvider, $urlRouterProvider) {
     url: "/home",
     views: {
       head: {
-        template: "view/head.html",
+        templateUrl: "views/head.html",
         controller: function($scope) {
           return $scope.things = ["A", "Set", "Of", "Things"];
         }
       },
       main: {
-        template: "view/home.html",
+        templateUrl: "views/home.html",
         controller: function($scope) {
           return $scope.things = ["A", "Set", "Of", "Things"];
         }
@@ -24,13 +24,13 @@ dont.config(function($stateProvider, $urlRouterProvider) {
     url: "/login",
     views: {
       head: {
-        template: "view/head.html",
+        templateUrl: "views/head.html",
         controller: function($scope) {
           return $scope.things = ["A", "Set", "Of", "Things"];
         }
       },
       main: {
-        template: "view/login.html",
+        templateUrl: "views/login.html",
         controller: function($scope) {
           return $scope.things = ["A", "Set", "Of", "Things"];
         }
@@ -40,13 +40,13 @@ dont.config(function($stateProvider, $urlRouterProvider) {
     url: "/choose",
     views: {
       head: {
-        template: "view/head.html",
+        templateUrl: "views/head.html",
         controller: function($scope) {
           return $scope.things = ["A", "Set", "Of", "Things"];
         }
       },
       main: {
-        template: "view/choose.html",
+        templateUrl: "views/choose.html",
         controller: function($scope) {
           return $scope.things = ["A", "Set", "Of", "Things"];
         }

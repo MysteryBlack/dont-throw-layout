@@ -1,4 +1,4 @@
-dont = angular.module("dont", [])
+dont = angular.module("dont", ['ui.router'])
 
 dont.config ($stateProvider, $urlRouterProvider) ->
   $urlRouterProvider.otherwise("/state1")
@@ -7,33 +7,33 @@ dont.config ($stateProvider, $urlRouterProvider) ->
       url: "/home",
       views:
         head:
-          template: "view/head.html"
+          templateUrl: "views/head.html"
           controller: ($scope) ->
             $scope.things = ["A", "Set", "Of", "Things"]
         main:
-          template: "view/home.html"
+          templateUrl: "views/home.html"
           controller: ($scope) ->
             $scope.things = ["A", "Set", "Of", "Things"]
     .state 'login',
       url: "/login",
       views:
         head:
-          template: "view/head.html"
+          templateUrl: "views/head.html"
           controller: ($scope) ->
             $scope.things = ["A", "Set", "Of", "Things"]
         main:
-          template: "view/login.html"
+          templateUrl: "views/login.html"
           controller: ($scope) ->
             $scope.things = ["A", "Set", "Of", "Things"]
     .state 'choose',
       url: "/choose"
       views:
         head:
-          template: "view/head.html"
+          templateUrl: "views/head.html"
           controller: ($scope) ->
             $scope.things = ["A", "Set", "Of", "Things"]
         main:
-          template: "view/choose.html"
+          templateUrl: "views/choose.html"
           controller: ($scope) ->
             $scope.things = ["A", "Set", "Of", "Things"]
     .state 'want_group',
