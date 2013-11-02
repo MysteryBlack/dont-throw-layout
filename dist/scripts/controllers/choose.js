@@ -1,7 +1,5 @@
 dont.controller("ChooseCtrl", function($scope) {
-  $scope.tid = null;
-  $scope.progress = null;
-  return $scope.status = 'output';
+  return $scope.tid = null;
 });
 
 /*
