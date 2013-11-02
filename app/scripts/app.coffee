@@ -7,7 +7,7 @@ dont.config ($stateProvider, $urlRouterProvider, $httpProvider) ->
     .state 'home',
       url: "/home",
       views:
-        header:
+        head:
           templateUrl: "views/head.html"
           controller: 'HeadCtrl'
         main:
@@ -16,7 +16,7 @@ dont.config ($stateProvider, $urlRouterProvider, $httpProvider) ->
     .state 'login',
       url: "/login",
       views:
-        header:
+        head:
           templateUrl: "views/head.html"
           controller: 'HeadCtrl'
         main:
@@ -25,7 +25,7 @@ dont.config ($stateProvider, $urlRouterProvider, $httpProvider) ->
     .state 'choose',
       url: "/choose"
       views:
-        header:
+        head:
           templateUrl: "views/head.html"
           controller: 'HeadCtrl'
         main:
@@ -34,7 +34,7 @@ dont.config ($stateProvider, $urlRouterProvider, $httpProvider) ->
     .state 'want_group',
       url: "/want_group"
       views:
-        header:
+        head:
           templateUrl: "views/head.html"
           controller: 'HeadCtrl'
         main:
@@ -43,7 +43,7 @@ dont.config ($stateProvider, $urlRouterProvider, $httpProvider) ->
     .state 'want_list',
       url: "/want_list"
       views:
-        header:
+        head:
           templateUrl: "views/head.html"
           controller: 'HeadCtrl'
         main:
@@ -52,7 +52,7 @@ dont.config ($stateProvider, $urlRouterProvider, $httpProvider) ->
     .state 'want_detail',
       url: "/want_detail"
       views:
-        header:
+        head:
           templateUrl: "views/head.html"
           controller: 'HeadCtrl'
         main:
@@ -61,7 +61,7 @@ dont.config ($stateProvider, $urlRouterProvider, $httpProvider) ->
     .state 'want_complete',
       url: "/want_complete"
       views:
-        header:
+        head:
           templateUrl: "views/head.html"
           controller: 'HeadCtrl'
         main:
@@ -70,7 +70,7 @@ dont.config ($stateProvider, $urlRouterProvider, $httpProvider) ->
     .state 'give_push',
       url: "/give_push"
       views:
-        header:
+        head:
           templateUrl: "views/head.html"
           controller: 'HeadCtrl'
         main:
@@ -79,7 +79,7 @@ dont.config ($stateProvider, $urlRouterProvider, $httpProvider) ->
     .state 'give_preview',
       url: "/give_preview"
       views:
-        header:
+        head:
           templateUrl: "views/head.html"
           controller: 'HeadCtrl'
         main:
