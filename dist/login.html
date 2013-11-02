@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/snap.svg/dist/snap.svg-min.js"></script>
+    <!-- build:js(app) scripts/modules.js-->
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/ngapi/ngapi.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="http://adodson.com/hello.js/dist/hello.all.js"></script>
+    <script src="scripts/test.js"></script>
+  </head>
+  <body>
+    <button onclick="hello( 'yahoo' ).login()">windows</button>
+    <script>
+    var YAHOO_CLI_ID = {
+  'dont-throw-layout':'dj0yJmk9cHZuRzlMOUkxMnB4JmQ9WVdrOVEzQmtha3RXTjJrbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD0wOQ--'
+}[window.location.hostname];
+var OAUTH_PROXY_URL = {
+  'dont-throw-layout' : 'https://auth-server.herokuapp.com/proxy'
+}[window.location.hostname];
+
+hello.init({ 
+    yahoo   : YAHOO_CLI_ID
+  },{redirect_uri:'/test.html',oauth_proxy:'https://auth-server.herokuapp.com/proxy'});
+
+hello.on('auth.login', function(auth){
+    // call user information, for the given network
+    hello( auth.network ).api( '/me' ).success(function(r){
+      console.log(r);
+    });
+  });
+
+    </script>
+  </body>
+  
+</html>

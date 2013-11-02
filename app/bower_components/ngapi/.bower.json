@@ -1,0 +1,17 @@
+{
+  "name": "ngapi",
+  "main": "./ngapi.js",
+  "dependencies": {
+    "angular": ">=1.0.8"
+  },
+  "homepage": "https://github.com/iamblue/ngApi",
+  "_release": "92ff7eb709",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "92ff7eb70921eedb56abbc8c300606c772ef24d8"
+  },
+  "_source": "git://github.com/iamblue/ngApi.git",
+  "_target": "*",
+  "_originalSource": "ngapi"
+}
