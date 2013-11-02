@@ -7,7 +7,7 @@ dont.controller "WantGroupCtrl", ($scope) ->
     group_mask.attr {fill: "#fff"}
     group.attr {mask: group_mask}
 
-    s.add(group.clone().x('50%','50%'))
+    s.add(group.clone().pattern('50%','50%'))
 
     setTimeout () ->
       group.animate({r: '25%'}, 1000, mina.elastic)

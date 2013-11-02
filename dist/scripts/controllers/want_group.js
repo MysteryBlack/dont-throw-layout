@@ -10,7 +10,7 @@ dont.controller("WantGroupCtrl", function($scope) {
     group.attr({
       mask: group_mask
     });
-    s.add(group.clone().x('50%', '50%'));
+    s.add(group.clone().pattern('50%', '50%'));
     return setTimeout(function() {
       return group.animate({
         r: '25%'
