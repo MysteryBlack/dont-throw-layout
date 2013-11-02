@@ -130,8 +130,8 @@ var YAHOO_CLI_ID = {
 	'api.dont-throw':'dj0yJmk9cHZuRzlMOUkxMnB4JmQ9WVdrOVEzQmtha3RXTjJrbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD0wOQ--'
 };
 hello.init({ 
-		yahoo   : YAHOO_CLI_ID
-	},{redirect_uri:'/'});
+		yahoo   : YAHOO_CLI_ID['api.dont-throw']
+	},{redirect_uri:'/aaa'});
 
 hello.on('auth.login', function(auth){
 		// call user information, for the given network
