@@ -29,7 +29,10 @@ html
     script(src='scripts/controllers/login.js')
     script(src='scripts/controllers/choose.js')
     script(src='scripts/controllers/want_group.js')
-  body(ng-app="dont")
+
+    link(type="text/css",rel="stylesheet",href="styles/dont.css")
+    link(type="text/css",rel="stylesheet",href="styles/home.css")
+  body(ng-app="dont",ng-controller="DocumentCtrl",ng-class="view")
     a(ui-sref="home") Home
     a(ui-sref="login") Login
     a(ui-sref="choose") choose

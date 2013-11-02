@@ -50,7 +50,7 @@ module.exports = (grunt) ->
         ]
     concurrent:
       dist: ["jade","coffee","stylus"]
-    clean: ["share/web"]
+    clean: ["<%= app.dist %>"]
     copy: 
       main: 
         files: [

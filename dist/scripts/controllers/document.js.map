@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "file": "login.js",
+  "file": "document.js",
   "sourceRoot": "",
   "sources": [
-    "login.coffee"
+    "document.coffee"
   ],
   "names": [],
-  "mappings": "AAcY"
+  "mappings": "AAG0B"
 }

@@ -49,3 +49,8 @@ dont.config ($stateProvider, $urlRouterProvider) ->
       url: "/give_push"
     .state 'give_preview',
       url: "/give_preview"
+
+dont.controller "DocumentCtrl", ($scope, $state) ->
+  $scope.view = 'home'
+  $scope.$on '$stateChangeStart', (event, toState, toParams, fromState, fromParams) ->
+    $scope.view = 'view-'+toState.name
