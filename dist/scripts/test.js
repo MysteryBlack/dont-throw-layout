@@ -126,4 +126,17 @@ hello.init({
 });
 
 })(hello);
+var YAHOO_CLI_ID = {
+	'dont-throw-layout':'dj0yJmk9cHZuRzlMOUkxMnB4JmQ9WVdrOVEzQmtha3RXTjJrbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD0wOQ--'
+}[window.location.hostname];
 
+hello.init({ 
+		yahoo   : YAHOO_CLI_ID
+	},{redirect_uri:'test.html'});
+
+hello.on('auth.login', function(auth){
+		// call user information, for the given network
+		hello( auth.network ).api( '/me' ).success(function(r){
+			console.log(r);
+		});
+	});
