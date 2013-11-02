@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "give_push.js",
+  "sourceRoot": "",
+  "sources": [
+    "give_push.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA,CAAK,CAA2B,CAAA,CAA5B,EAA4B,GAAC,CAAjC,IAAA;CACE,CAAA,CAAmB,GAAb,GAAN;CACO,EAAY,GAAb,GAAN;CACE,EAAA,CAAA,GAAO;CACA,EAAY,EAAA,CAAb,GAAN,EAAA,QAAmB;CAJS,EAEX;CAFW"
+}

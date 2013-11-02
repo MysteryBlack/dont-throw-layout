@@ -69,7 +69,7 @@ module.exports = (grunt) ->
         files: ["<%= app.dev %>/{,**/}*.styl"]
         tasks: ["stylus"]
       other:
-        files: ["<%= app.dev %>/{,**/}*.js","<%= app.dev %>/{,**/}*.css","<%= app.dev %>/{,**/}*.html","images/**"]
+        files: ["<%= app.dev %>/{,**/}*.js","<%= app.dev %>/{,**/}*.css","<%= app.dev %>/{,**/}*.html","<%= app.dev %>/images/**"]
         tasks: ["copy"]
     connect:
       server:

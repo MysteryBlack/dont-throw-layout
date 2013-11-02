@@ -59,7 +59,17 @@ dont.config(function($stateProvider, $urlRouterProvider) {
   }).state('want_complete', {
     url: "/want_complete"
   }).state('give_push', {
-    url: "/give_push"
+    url: "/give_push",
+    views: {
+      head: {
+        templateUrl: "views/head.html",
+        controller: 'HeadCtrl'
+      },
+      main: {
+        templateUrl: "views/give_push.html",
+        controller: 'GivePushCtrl'
+      }
+    }
   }).state('give_preview', {
     url: "/give_preview"
   });
