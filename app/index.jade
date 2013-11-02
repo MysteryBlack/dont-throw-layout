@@ -31,11 +31,9 @@ html
     script(src='scripts/controllers/want_group.js')
 
     link(type="text/css",rel="stylesheet",href="styles/dont.css")
+    link(type="text/css",rel="stylesheet",href="styles/head.css")
     link(type="text/css",rel="stylesheet",href="styles/home.css")
+    link(type="text/css",rel="stylesheet",href="styles/login.css")
   body(ng-app="dont",ng-controller="DocumentCtrl",ng-class="view")
-    a(ui-sref="home") Home
-    a(ui-sref="login") Login
-    a(ui-sref="choose") choose
-    a(ui-sref="want_group") Want_Group
     #head(ui-view="head")
     #main(ui-view="main")
