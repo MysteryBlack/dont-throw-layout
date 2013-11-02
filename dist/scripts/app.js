@@ -3,7 +3,7 @@ var dont;
 dont = angular.module("dont", ['ui.router']);
 
 dont.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise("/state1");
+  $urlRouterProvider.otherwise("/home");
   return $stateProvider.state('home', {
     url: "/home",
     views: {
