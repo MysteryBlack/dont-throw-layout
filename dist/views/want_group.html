@@ -2,13 +2,23 @@
 <html>
   <body>
     <div id="want_group" class="content"><img src="./images/want_group_bg.png" class="bg"/>
-      <div ng-class="'active-'+groupActive" class="turntable"><img src="images/want_group_turntable_shadow.png"/>
-        <div class="runrun"><img src="images/want_group_turntable.png"/>
-          <div ng-click="selectGroup('group-a')" class="group group-a"></div>
-          <div ng-click="selectGroup('group-b')" class="group group-b"></div>
-          <div ng-click="selectGroup('group-c')" class="group group-c"></div>
-          <div ng-click="selectGroup('group-d')" class="group group-d"></div>
+      <div ng-class="'active-'+groupActive" class="turntable"><img src="images/transparent.png"/>
+        <div class="shadow"></div>
+        <div class="heart">
+          <div ng-click="selectGroup('group-a')" class="group group-a">
+            <div class="text text-a"></div>
+          </div>
+          <div ng-click="selectGroup('group-b')" class="group group-b">
+            <div class="text text-b"></div>
+          </div>
+          <div ng-click="selectGroup('group-c')" class="group group-c">
+            <div class="text text-c"></div>
+          </div>
+          <div ng-click="selectGroup('group-d')" class="group group-d">
+            <div class="text text-d"></div>
+          </div>
         </div>
+        <div class="pointer"><img src="images/want_group_pointer.png"/></div><a href="#/want_list" class="hand"><img src="images/want_group_hand.png"/></a>
       </div>
     </div>
   </body>

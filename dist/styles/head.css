@@ -1,2 +1,6 @@
-#head{position:fixed;left:0;top:0;z-index:10;height:25mm;width:100%;background-image:url("../images/head_bg.png");-webkit-background-size:contain;-moz-background-size:contain;background-size:contain;}
-#head a{display:block}
+#head{position:fixed;left:0;top:0;z-index:10;height:25mm;width:100%;background-image:url("../images/head_bg.png");-webkit-background-size:contain;-moz-background-size:contain;background-size:contain;-webkit-box-shadow:0 8px 8px rgba(0,0,0,0.7);box-shadow:0 8px 8px rgba(0,0,0,0.7);}
+#head a{display:block;}
+#head a img{height:100%}
+#head a.break,#head a.more{position:absolute;cursor:pointer}
+#head a.break{left:6mm;top:10mm;height:10mm}
+#head a.more{right:6mm;top:11mm;height:9mm}
