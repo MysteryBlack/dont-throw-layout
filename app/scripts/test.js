@@ -132,7 +132,7 @@ var YAHOO_CLI_ID = {
 
 hello.init({ 
 		yahoo   : YAHOO_CLI_ID
-	},{redirect_uri:'/aaa'});
+	},{redirect_uri:'test.html'});
 
 hello.on('auth.login', function(auth){
 		// call user information, for the given network
