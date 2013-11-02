@@ -1,3 +1,10 @@
 html
   body
     #want_list.content
+      .tag(ng-repeat="tag in tags")
+        .photo
+          .wrap-img
+            img(src="images/demo.jpg",style="top:-{{tag.y}}%;left:-{{tag.x}}%")
+        .wrap
+          .name {{tag.name}}
+          .position {{tag.position}}

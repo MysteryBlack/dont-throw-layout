@@ -1,1 +1,6 @@
-#want_list{width:100%}
+#want_list{width:100%;}
+#want_list .tag{position:relative;width:100%;height:120px;}
+#want_list .tag .photo{width:110px;height:110px;overflow:hidden;position:relative;}
+#want_list .tag .photo .wrap-img,#want_list .tag .photo img{width:360px;height:360px;position:relative}
+#want_list .tag .photo img{margin-left:55px;margin-top:55px;position:absolute;top:0;left:0}
+#want_list .tag .wrap{position:absolute;left:120px;top:0}
