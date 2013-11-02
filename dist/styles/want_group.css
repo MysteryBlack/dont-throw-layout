@@ -21,3 +21,4 @@
 #want_group .turntable .group.group-b{top:25%;left:50%}
 #want_group .turntable .group.group-c{top:25%}
 #want_group .turntable .group.group-d{top:50%;left:25%}
+#want_group .turntable .hand{position:absolute;left:50%;top:100%;width:50%;margin-left:-25%}
