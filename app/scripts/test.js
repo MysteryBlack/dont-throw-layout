@@ -127,7 +127,7 @@ hello.init({
 
 })(hello);
 var YAHOO_CLI_ID = {
-	'api.dont-throw':'dj0yJmk9MjBmb0F0cWN5R3NSJmQ9WVdrOVFUaFdSalZKTTJNbWNHbzlNVGMwTnpjek1qWXkmcz1jb25zdW1lcnNlY3JldCZ4PTFi'
+	'api.dont-throw':'dj0yJmk9cHZuRzlMOUkxMnB4JmQ9WVdrOVEzQmtha3RXTjJrbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD0wOQ--'
 };
 hello.init({ 
 		yahoo   : YAHOO_CLI_ID
