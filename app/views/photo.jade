@@ -1,0 +1,43 @@
+html
+  body
+    .wrap(ng-show="user.status=='login'",ng-class="{'hide-toolbar': !toolbar}",ng-init="init()",ng-mousemove="zoom_listener($event)",ng-mouseleave="zoom_end()",ng-mouseup="zoom_end()")
+      #menu
+        .wrap(ng-hide="tab=='albumPhoto'")
+          a.nav(href="#/photo",ng-class="{active: tab=='photo'}") All Photos
+          a.nav(href="#/album",ng-class="{active: tab=='album'}") Albums
+        .wrap(ng-show="tab=='albumPhoto'")
+          a.back(href="#/album"): span Back
+          a {{album.title}}
+        .zoom
+          .zoom-min
+          .zoom-left
+          .zoom-right
+          .zoom-max
+          .zoom-meso(ng-click="zoom_listener($event,true)")
+            .zoom-btn(style="left:{{zoom}}%",ng-mousedown="zoom_start()",ng-mousedown="zoom_start($event)")
+        .toolbar-toggle(ng-class="{checked: toolbar}",ng-click="toolbar_toggle()")
+      #toolbar
+        .selected
+          .fixed
+            .item
+            .item
+            .item
+            .item
+            .item
+            .item
+          .preview
+            .item.active(style="background-image:url({{item.src}});",ng-repeat="item in selected | lastTo:6",ng-class="{hover: item.hover}",ng-mouseover="item.hover=true",ng-mouseleave="item.hover=false",ng-click="select(item)")
+              .checkbox
+        .select_info
+          a.btn_blue(href="#/selected") {{selected.length}} Selected
+          a.btn_red(ng-click="clear()") Delete All
+        .next
+          a.btn_blue(href="#/template") Next
+      #main
+        .item(class="type-{{item.type}}",style="width:{{item.dis_width}}px;height:{{item.dis_height}}px",ng-repeat="item in items | limitTo:limit | layout:box",ng-class="{hover: item.hover, active:item.selected > 0}",ng-mouseover="item.hover=true",ng-mouseleave="item.hover=false",ng-click="enter(item,$event)")
+          .thumb(style="background-image:url({{item.src}});width:{{item.dis_width}}px;height:{{item.dis_height}}px")
+          .title {{item.title}}
+          .count {{item.count}} Photos
+          .selected
+            span {{item.selected}} Selected
+          .checkbox(ng-click="select(item)")

@@ -1,0 +1,49 @@
+
+<html>
+  <body>
+    <div ng-show="user.status=='login'" ng-class="{'hide-toolbar': !toolbar}" ng-init="init()" ng-mousemove="zoom_listener($event)" ng-mouseleave="zoom_end()" ng-mouseup="zoom_end()" class="wrap">
+      <div id="menu">
+        <div ng-hide="tab=='albumPhoto'" class="wrap"><a href="#/photo" ng-class="{active: tab=='photo'}" class="nav">All Photos</a><a href="#/album" ng-class="{active: tab=='album'}" class="nav">Albums</a></div>
+        <div ng-show="tab=='albumPhoto'" class="wrap"><a href="#/album" class="back"><span>Back</span></a><a>{{album.title}}</a></div>
+        <div class="zoom">
+          <div class="zoom-min"></div>
+          <div class="zoom-left"></div>
+          <div class="zoom-right"></div>
+          <div class="zoom-max"></div>
+          <div ng-click="zoom_listener($event,true)" class="zoom-meso">
+            <div style="left:{{zoom}}%" ng-mousedown="zoom_start($event)" class="zoom-btn"></div>
+          </div>
+        </div>
+        <div ng-class="{checked: toolbar}" ng-click="toolbar_toggle()" class="toolbar-toggle"></div>
+      </div>
+      <div id="toolbar">
+        <div class="selected">
+          <div class="fixed">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+          </div>
+          <div class="preview">
+            <div style="background-image:url({{item.src}});" ng-repeat="item in selected | lastTo:6" ng-class="{hover: item.hover}" ng-mouseover="item.hover=true" ng-mouseleave="item.hover=false" ng-click="select(item)" class="item active">
+              <div class="checkbox"></div>
+            </div>
+          </div>
+        </div>
+        <div class="select_info"><a href="#/selected" class="btn_blue">{{selected.length}} Selected</a><a ng-click="clear()" class="btn_red">Delete All</a></div>
+        <div class="next"><a href="#/template" class="btn_blue">Next</a></div>
+      </div>
+      <div id="main">
+        <div style="width:{{item.dis_width}}px;height:{{item.dis_height}}px" ng-repeat="item in items | limitTo:limit | layout:box" ng-class="{hover: item.hover, active:item.selected &gt; 0}" ng-mouseover="item.hover=true" ng-mouseleave="item.hover=false" ng-click="enter(item,$event)" class="item type-{{item.type}}">
+          <div style="background-image:url({{item.src}});width:{{item.dis_width}}px;height:{{item.dis_height}}px" class="thumb"></div>
+          <div class="title">{{item.title}}</div>
+          <div class="count">{{item.count}} Photos</div>
+          <div class="selected"><span>{{item.selected}} Selected</span></div>
+          <div ng-click="select(item)" class="checkbox"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
