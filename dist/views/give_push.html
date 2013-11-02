@@ -3,10 +3,11 @@
   <body>
     <div id="give_push" class="content">
       <div id="updatepic">
-        <input type="file" accept="image/*" ng-file-select="ng-file-select" class="mrleft"/>
+        <p class="h11">點選新增圖片</p>
+        <input type="file" accept="image/*" ng-file-select="ng-file-select" style="margin-top:-50%;width:50%;border:2px dotted #fff;background:#fff;opacity:.8" class="mrleft"/>
         <div ng-show="uploader.queue.length" class="mrleft">
           <div><span class="badge">{{ uploader.queue.length }} files will update</span>
-            <div><a href="" ng-click="uploader.uploadAll()" ng-show="uploader.getNotUploadedItems().length" class="btn btn-white btn-default btn-gradient cyan">upload</a><a href="" ng-click="uploader.clearQueue()" class="btn btn-white btn-default btn-gradient red">delete</a></div>
+            <div><a href="" ng-click="uploader.uploadAll()" ng-show="uploader.getNotUploadedItems().length" class="btn btn-white btn-default btn-gradient cyan large">upload</a><a href="" ng-click="uploader.clearQueue()" class="btn btn-white btn-default btn-gradient red large">delete</a></div>
           </div>
         </div>
       </div>

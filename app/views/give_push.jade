@@ -2,13 +2,14 @@ html
   body
     #give_push.content
       div#updatepic
-        input(type="file",accept="image/*",ng-file-select,class="mrleft")
+        p.h11 點選新增圖片
+        input.mrleft(type="file",accept="image/*",ng-file-select,style="margin-top:-50%;width:50%;border:2px dotted #fff;background:#fff;opacity:.8")
         div(ng-show="uploader.queue.length",class="mrleft")
           div
             span.badge {{ uploader.queue.length }} files will update
             div
-              a.btn.btn-white.btn-default(href="",ng-click="uploader.uploadAll()",ng-show="uploader.getNotUploadedItems().length",class="btn-gradient cyan") upload
-              a.btn.btn-white.btn-default(href="",ng-click="uploader.clearQueue()",class="btn-gradient red") delete
+              a.btn.btn-white.btn-default(href="",ng-click="uploader.uploadAll()",ng-show="uploader.getNotUploadedItems().length",class="btn-gradient cyan large") upload
+              a.btn.btn-white.btn-default(href="",ng-click="uploader.clearQueue()",class="btn-gradient red large") delete
       div(ng-click="addTag($event)",ng-class="openthis? 'thing':'disthing'")
         img.photo(src="{{mainPic}}")
         .tag(ng-repeat="tag in tags",style="top:{{tag.y}}%;left:{{tag.x}}%")
