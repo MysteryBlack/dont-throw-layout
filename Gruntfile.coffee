@@ -69,7 +69,17 @@ module.exports = (grunt) ->
         files: ["<%= app.dev %>/{,**/}*.styl"]
         tasks: ["stylus"]
       other:
-        files: ["<%= app.dev %>/{,**/}*.js","<%= app.dev %>{,**/}*.css"]
+        files: ["<%= app.dev %>/{,**/}*.js","<%= app.dev %>/{,**/}*.css"]
         tasks: ["copy"]
+    connect:
+      server:
+        options:
+          port: 9001,
+          base: "<%= app.dist %>"
+          hostname: "localhost"
+      # livereload:
+      #   options:
+      #     middleware: (connect) ->
+      #       [mountFolder(connect, "<%= app.dist %>")]
 
-  grunt.registerTask "default", ["clean","copy","concurrent:dist", "watch"]
+  grunt.registerTask "default", ["clean","copy","concurrent:dist", "connect",  "watch"]
