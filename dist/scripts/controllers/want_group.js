@@ -1,5 +1,8 @@
 dont.controller("WantGroupCtrl", function($scope) {
-  return $scope.drawGroup = function() {};
+  $scope.groupActive = 'group-a';
+  return $scope.selectGroup = function(group) {
+    return $scope.groupActive = group;
+  };
 });
 
 /*

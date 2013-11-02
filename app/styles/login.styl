@@ -19,9 +19,13 @@
       margin-top: 3mm
       background: none
       clear: both
-    button.yahoo
-      border: none
-      background-image: url('../images/login_btn_yahoo.jpg')
+      color: #000
+    button
       background-position: center center
       background-size: cover
       background-repeat: no-repeat
+      border: none
+      &.yahoo
+        background-image: url('../images/login_btn_yahoo.png')
+      &.dont
+        background-image: url('../images/login_btn_dont.png')

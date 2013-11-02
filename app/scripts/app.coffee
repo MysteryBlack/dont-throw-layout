@@ -85,7 +85,7 @@ dont.config ($stateProvider, $urlRouterProvider) ->
           templateUrl: "views/give_preview.html"
           controller: 'GivePreviewCtrl'
 
-dont.controller "DocumentCtrl", ($scope, $state) ->
-  $scope.view = 'home'
-  $scope.$on '$stateChangeStart', (event, toState, toParams, fromState, fromParams) ->
-    $scope.view = 'view-'+toState.name
+dont.run ($rootScope) ->
+  $rootScope.view = 'home'
+  $rootScope.$on '$stateChangeStart', (event, toState, toParams, fromState, fromParams) ->
+    $rootScope.view = 'view-'+toState.name
