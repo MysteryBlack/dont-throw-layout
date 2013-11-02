@@ -4,24 +4,66 @@ dont = angular.module("dont", []);
 
 dont.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/state1");
-  return $stateProvider.state('state1', {
-    url: "/state1",
-    templateUrl: "partials/state1.html"
-  }).state('state1.list', {
-    url: "/list",
-    templateUrl: "partials/state1.list.html",
-    controller: function($scope) {
-      return $scope.items = ["A", "List", "Of", "Items"];
+  return $stateProvider.state('home', {
+    url: "/home",
+    views: {
+      head: {
+        template: "view/head.html",
+        controller: function($scope) {
+          return $scope.things = ["A", "Set", "Of", "Things"];
+        }
+      },
+      main: {
+        template: "view/home.html",
+        controller: function($scope) {
+          return $scope.things = ["A", "Set", "Of", "Things"];
+        }
+      }
     }
-  }).state('state2', {
-    url: "/state2",
-    templateUrl: "partials/state2.html"
-  }).state('state2.list', {
-    url: "/list",
-    templateUrl: "partials/state2.list.html",
-    controller: function($scope) {
-      return $scope.things = ["A", "Set", "Of", "Things"];
+  }).state('login', {
+    url: "/login",
+    views: {
+      head: {
+        template: "view/head.html",
+        controller: function($scope) {
+          return $scope.things = ["A", "Set", "Of", "Things"];
+        }
+      },
+      main: {
+        template: "view/login.html",
+        controller: function($scope) {
+          return $scope.things = ["A", "Set", "Of", "Things"];
+        }
+      }
     }
+  }).state('choose', {
+    url: "/choose",
+    views: {
+      head: {
+        template: "view/head.html",
+        controller: function($scope) {
+          return $scope.things = ["A", "Set", "Of", "Things"];
+        }
+      },
+      main: {
+        template: "view/choose.html",
+        controller: function($scope) {
+          return $scope.things = ["A", "Set", "Of", "Things"];
+        }
+      }
+    }
+  }).state('want_group', {
+    url: "/want_group"
+  }).state('want_list', {
+    url: "/want_list"
+  }).state('want_detail', {
+    url: "/want_detail"
+  }).state('want_complete', {
+    url: "/want_complete"
+  }).state('give_push', {
+    url: "/give_push"
+  }).state('give_preview', {
+    url: "/give_preview"
   });
 });
 
