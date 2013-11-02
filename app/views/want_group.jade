@@ -3,10 +3,16 @@ html
     #want_group.content
       img.bg(src="./images/want_group_bg.png")
       .turntable(ng-class="'active-'+groupActive")
-        img(src="images/want_group_turntable_shadow.png")
-        .runrun
-          img(src="images/want_group_turntable.png")
+        img(src="images/transparent.png")
+        .shadow
+        .heart
           .group.group-a(ng-click="selectGroup('group-a')")
+            .text.text-a
           .group.group-b(ng-click="selectGroup('group-b')")
+            .text.text-b
           .group.group-c(ng-click="selectGroup('group-c')")
+            .text.text-c
           .group.group-d(ng-click="selectGroup('group-d')")
+            .text.text-d
+        .pointer
+          img(src="images/want_group_pointer.png")

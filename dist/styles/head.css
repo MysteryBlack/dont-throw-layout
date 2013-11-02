@@ -1,2 +1,2 @@
-#head{position:fixed;left:0;top:0;z-index:10;height:25mm;width:100%;background-image:url("../images/head_bg.png");-webkit-background-size:contain;-moz-background-size:contain;background-size:contain;}
+#head{position:fixed;left:0;top:0;z-index:10;height:25mm;width:100%;background-image:url("../images/head_bg.png");-webkit-background-size:contain;-moz-background-size:contain;background-size:contain;-webkit-box-shadow:0 8px 8px rgba(0,0,0,0.7);box-shadow:0 8px 8px rgba(0,0,0,0.7);}
 #head a{display:block}
