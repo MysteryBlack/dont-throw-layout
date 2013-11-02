@@ -22,4 +22,7 @@ html
 
     script(src='scripts/app.js')
   body(ng-app="dont")
-    svg#svg(style="width:400px;height:300px")
+    //- <a ui-sref="route1">Route 1</a>
+    //- <a ui-sref="route2">Route 2</a>
+    div(ui-view="main")
+    div(ui-view="menu")
