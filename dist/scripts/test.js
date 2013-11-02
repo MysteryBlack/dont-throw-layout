@@ -126,17 +126,30 @@ hello.init({
 });
 
 })(hello);
-var YAHOO_CLI_ID = {
+var YAHOO_CLIENT_ID = {
 	'dont-throw-layout':'dj0yJmk9cHZuRzlMOUkxMnB4JmQ9WVdrOVEzQmtha3RXTjJrbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD0wOQ--'
 }[window.location.hostname];
 
-hello.init({ 
-		yahoo   : YAHOO_CLI_ID['dont-throw-layout']
-	},{redirect_uri:'test.html'});
 
-hello.on('auth.login', function(auth){
-		// call user information, for the given network
-		hello( auth.network ).api( '/me' ).success(function(r){
-			console.log(r);
-		});
-	});
+var OAUTH_PROXY_URL = {
+	'dont-throw-layout' : 'https://auth-server.herokuapp.com/proxy',
+	'local.knarly.com' : 'http://local.knarly.com:5500/proxy'
+}[window.location.hostname];
+
+
+// Initiate the library
+var CLIENT_IDS_ALL = {
+	yahoo : YAHOO_CLIENT_ID
+};
+
+hello.init(CLIENT_IDS_ALL,{redirect_uri: 'test.html', oauth_proxy:OAUTH_PROXY_URL});
+
+$('#tests-template').load('assets/test_network.html', function() {
+	//knockout binding goes here
+	ko.applyBindings(model);
+});
+
+hello.on('auth.login', function(){
+	$("#profile_done").show();
+})
+
