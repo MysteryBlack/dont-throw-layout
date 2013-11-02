@@ -1,8 +1,10 @@
 #give_push .disthing{display:none}
 #give_push .thing{width:90%;margin:0 auto;max-width:640px;position:relative;position:absolute;top:0;width:100%;height:400px;background:#fff;}
-#give_push .thing .photo{width:100%}
-#give_push .thing .tag{position:absolute;left:0;top:0;width:60px;height:20px;background:#0f0}
+#give_push .thing .photo{width:640px;height:640px;overflow:hidden}
+#give_push .thing .tag{position:absolute;left:0;top:0;width:60px;height:20px;background:url("/images/tagsearch.png") no-repeat 0 0}
 #give_push .badge{color:#aaa;text-align:center}
 #give_push .mrleft{margin-left:25%}
+#give_push .openthis{display:block}
+#give_push .closethis{display:none}
 #give_push #updatepic{width:640px;height:640px;background:#000;}
 #give_push #updatepic input{width:258px;height:38px;margin-top:20%}

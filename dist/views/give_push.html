@@ -5,17 +5,15 @@
       <div id="updatepic">
         <input type="file" accept="image/*" ng-file-select="ng-file-select" class="mrleft"/>
         <div ng-show="uploader.queue.length" class="mrleft">
-          <div>
-            <div class="progress progress-mini m-t-small">  
-              <div ng-style="{ 'width': uploader.progress + '%' }" class="progress-bar progress-bar-info"></div>
-            </div><span class="badge">{{ uploader.queue.length }} files will update</span>
+          <div><span class="badge">{{ uploader.queue.length }} files will update</span>
             <div><a href="" ng-click="uploader.uploadAll()" ng-show="uploader.getNotUploadedItems().length" class="btn btn-white btn-default btn-gradient cyan">upload</a><a href="" ng-click="uploader.clearQueue()" class="btn btn-white btn-default btn-gradient red">delete</a></div>
           </div>
         </div>
       </div>
-      <div ng-click="addTag($event)" ng-class="openthis? 'thing':'disthing'"><img src="{{mainPic}}" border="0;" class="photo"/>
+      <div ng-click="addTag($event)" ng-class="openthis? 'thing':'disthing'"><img src="{{mainPic}}" class="photo"/>
         <div ng-repeat="tag in tags" style="top:{{tag.y}}%;left:{{tag.x}}%" class="tag"></div>
       </div>
+      <div><img src="/images/finishtag.png" style="position:absolute;top:640px;right:0;z-index:20" ng-class="clicktag?'openthis':'closethis'" ng-click="finishtag()"/></div>
       <div style="position:absolute"><img style="float:left;position:absolute;" src="http://maps.googleapis.com/maps/api/staticmap?zoom=16&amp;size=640x480&amp;sensor=false&amp;key=AIzaSyAEwpiQ0Bxihw4luyQ-CwvBj0luSFiyHJQ&amp;center=25.05735,121.61508&amp;markers=color:blue%7Clabel:X%7C25.05735,121.61508"/><a style="position:absolute;float:left;left:250px;top:250px;width:180px;text-align:center;height:50px;border:1px solid #777;border-radius:10px;background:#fff;opacity:.8;line-height:50px;cursor:pointer">這是您的地標</a></div>
     </div>
   </body>
