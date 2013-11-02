@@ -8,7 +8,7 @@ dont.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   return $stateProvider.state('home', {
     url: "/home",
     views: {
-      head: {
+      header: {
         templateUrl: "views/head.html",
         controller: 'HeadCtrl'
       },
@@ -20,7 +20,7 @@ dont.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   }).state('login', {
     url: "/login",
     views: {
-      head: {
+      header: {
         templateUrl: "views/head.html",
         controller: 'HeadCtrl'
       },
@@ -32,7 +32,7 @@ dont.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   }).state('choose', {
     url: "/choose",
     views: {
-      head: {
+      header: {
         templateUrl: "views/head.html",
         controller: 'HeadCtrl'
       },
@@ -44,7 +44,7 @@ dont.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   }).state('want_group', {
     url: "/want_group",
     views: {
-      head: {
+      header: {
         templateUrl: "views/head.html",
         controller: 'HeadCtrl'
       },
@@ -56,7 +56,7 @@ dont.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   }).state('want_list', {
     url: "/want_list",
     views: {
-      head: {
+      header: {
         templateUrl: "views/head.html",
         controller: 'HeadCtrl'
       },
@@ -68,7 +68,7 @@ dont.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   }).state('want_detail', {
     url: "/want_detail",
     views: {
-      head: {
+      header: {
         templateUrl: "views/head.html",
         controller: 'HeadCtrl'
       },
@@ -80,7 +80,7 @@ dont.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   }).state('want_complete', {
     url: "/want_complete",
     views: {
-      head: {
+      header: {
         templateUrl: "views/head.html",
         controller: 'HeadCtrl'
       },
@@ -92,7 +92,7 @@ dont.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   }).state('give_push', {
     url: "/give_push",
     views: {
-      head: {
+      header: {
         templateUrl: "views/head.html",
         controller: 'HeadCtrl'
       },
@@ -104,7 +104,7 @@ dont.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   }).state('give_preview', {
     url: "/give_preview",
     views: {
-      head: {
+      header: {
         templateUrl: "views/head.html",
         controller: 'HeadCtrl'
       },
@@ -116,13 +116,10 @@ dont.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   });
 });
 
-dont.controller("DocumentCtrl", function($scope, $state) {
-  $scope.yoyo = function() {
-    return console.log($scope.pass);
-  };
-  $scope.view = 'home';
-  return $scope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
-    return $scope.view = 'view-' + toState.name;
+dont.run(function($rootScope, $state) {
+  $rootScope.view = 'home';
+  return $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+    return $rootScope.view = 'view-' + toState.name;
   });
 });
 
