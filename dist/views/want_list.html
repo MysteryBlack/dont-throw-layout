@@ -1,6 +1,16 @@
 
 <html>
   <body>
-    <div id="want_list" class="content"></div>
+    <div id="want_list" class="content">
+      <div ng-repeat="tag in tags" class="tag">
+        <div class="photo">
+          <div class="wrap-img"><img src="images/demo.jpg" style="top:-{{tag.y}}%;left:-{{tag.x}}%"/></div>
+        </div>
+        <div class="wrap">
+          <div class="name">{{tag.name}}</div>
+          <div class="position">{{tag.position}}</div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

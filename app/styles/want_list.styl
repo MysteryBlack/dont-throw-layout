@@ -2,3 +2,27 @@
 
 #want_list
   width: 100%
+  $size=120px
+  .tag
+    position: relative
+    width: 100%
+    height: $size
+    .photo
+      width: $size - 10px
+      height: $size - 10px
+      overflow: hidden
+      position: relative
+      .wrap-img, img
+        width: $size * 3
+        height: $size * 3
+        position: relative
+      img
+        margin-left: (($size - 10px) / 2)
+        margin-top: (($size - 10px) / 2)
+        position: absolute
+        top: 0
+        left: 0
+    .wrap
+      position: absolute
+      left: $size
+      top: 0px
