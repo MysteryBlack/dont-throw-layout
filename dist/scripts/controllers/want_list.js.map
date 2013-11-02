@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "want_list.js",
+  "sourceRoot": "",
+  "sources": [
+    "want_list.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA,CAAK,CAA2B,CAAA,CAA5B,EAA4B,GAAC,CAAjC,IAAA;CACS,EAAO,CAAd,EAAM,GAAN;CAD8B"
+}

@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "want_complete.js",
+  "sourceRoot": "",
+  "sources": [
+    "want_complete.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA,CAAK,CAA+B,CAAA,CAAhC,EAAgC,GAAC,CAArC,QAAA;CACS,EAAO,CAAd,EAAM,GAAN;CADkC"
+}

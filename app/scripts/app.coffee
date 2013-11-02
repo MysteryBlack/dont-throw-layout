@@ -41,10 +41,31 @@ dont.config ($stateProvider, $urlRouterProvider) ->
           controller: 'WantGroupCtrl'
     .state 'want_list',
       url: "/want_list"
+      views:
+        head:
+          templateUrl: "views/head.html"
+          controller: 'HeadCtrl'
+        main:
+          templateUrl: "views/want_list.html"
+          controller: 'WantListCtrl'
     .state 'want_detail',
       url: "/want_detail"
+      views:
+        head:
+          templateUrl: "views/head.html"
+          controller: 'HeadCtrl'
+        main:
+          templateUrl: "views/want_detail.html"
+          controller: 'WantDetailCtrl'
     .state 'want_complete',
       url: "/want_complete"
+      views:
+        head:
+          templateUrl: "views/head.html"
+          controller: 'HeadCtrl'
+        main:
+          templateUrl: "views/want_complete.html"
+          controller: 'WantCompleteCtrl'
     .state 'give_push',
       url: "/give_push"
       views:
@@ -56,6 +77,13 @@ dont.config ($stateProvider, $urlRouterProvider) ->
           controller: 'GivePushCtrl'
     .state 'give_preview',
       url: "/give_preview"
+      views:
+        head:
+          templateUrl: "views/head.html"
+          controller: 'HeadCtrl'
+        main:
+          templateUrl: "views/give_preview.html"
+          controller: 'GivePreviewCtrl'
 
 dont.controller "DocumentCtrl", ($scope, $state) ->
   $scope.view = 'home'

@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "want_detail.js",
+  "sourceRoot": "",
+  "sources": [
+    "want_detail.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA,CAAK,CAA6B,CAAA,CAA9B,EAA8B,GAAC,CAAnC,MAAA;CACS,EAAO,CAAd,EAAM,GAAN;CADgC"
+}
