@@ -127,10 +127,10 @@ hello.init({
 
 })(hello);
 var YAHOO_CLI_ID = {
-	'api.dont-throw':'dj0yJmk9cHZuRzlMOUkxMnB4JmQ9WVdrOVEzQmtha3RXTjJrbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD0wOQ--'
+	'dont-throw-layout':'dj0yJmk9cHZuRzlMOUkxMnB4JmQ9WVdrOVEzQmtha3RXTjJrbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD0wOQ--'
 };
 hello.init({ 
-		yahoo   : YAHOO_CLI_ID['api.dont-throw']
+		yahoo   : YAHOO_CLI_ID
 	},{redirect_uri:'/aaa'});
 
 hello.on('auth.login', function(auth){
