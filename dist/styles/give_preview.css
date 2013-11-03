@@ -1,1 +1,2 @@
-#give_preview{width:100%}
+#give_preview{width:100%;}
+#give_preview .maskfont{font-size:14px;color:#eee;opacity:.9;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";filter:alpha(opacity=90);margin-left:20%}

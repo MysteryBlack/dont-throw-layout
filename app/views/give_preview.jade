@@ -1,3 +1,15 @@
 html
   body
     #give_preview.content
+      div(style="background-image:url('/images/previewfr.png');width:100%;height:250px")
+      
+      img(src="/images/previewbtn.png",style="width:100%")  
+      div(style="width100%;position:absolute;left:0;top:250px;width:100%;height:300px;z-index:20;")
+        p.maskfont Object name: {{objname}}
+        p.maskfont Description: {{objdesp}}
+        p.maskfont Position: {{objposition}}
+        p.maskfont point: {{objpoint}}
+        div(style="width:100%;height:100px")
+          img(src="/images/give.png",style="float:left;width:20%;margin-left:20%")
+          img(src="/images/po.png",style="float:right;width:20%;margin-right:20%")
+

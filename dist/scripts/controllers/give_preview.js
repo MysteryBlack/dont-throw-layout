@@ -1,4 +1,4 @@
-dont.controller("GivePreviewCtrl", function($scope) {
+dont.controller("GivePreviewCtrl", function($scope, $stateParams) {
   $scope.tags = [];
   return $scope.addTag = function(e) {
     var offsetX, offsetY;

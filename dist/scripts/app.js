@@ -102,7 +102,15 @@ dont.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
       }
     }
   }).state('give_preview', {
-    url: "/give_preview",
+    url: "/give_preview/:id",
+    resolve: {
+      data: function($http) {
+        return $http({
+          method: "GET",
+          url: "http://api.dont-throw.com/get/location"
+        });
+      }
+    },
     views: {
       head: {
         templateUrl: "views/head.html",

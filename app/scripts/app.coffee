@@ -77,7 +77,13 @@ dont.config ($stateProvider, $urlRouterProvider, $httpProvider) ->
           templateUrl: "views/give_push.html"
           controller: 'GivePushCtrl'
     .state 'give_preview',
-      url: "/give_preview"
+      url: "/give_preview/:id",
+      resolve:
+        data:($http) ->
+          $http
+            method: "GET"
+            url: "http://api.dont-throw.com/get/location"
+
       views:
         head:
           templateUrl: "views/head.html"
