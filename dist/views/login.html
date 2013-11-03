@@ -3,9 +3,8 @@
   <body>
     <div id="login" class="content"><img src="images/login_bg.png" border="0" class="bg"/>
       <div class="box">
-        <input type="text" placeholder="Email" ng-model="user"/>
-        <input type="password" placeholder="Password" ng-model="password"/><a ng-api="(email:email||password:nospace)(restfullogin:/api/rest-auth/nonce||/api/rest-auth/login)" href="">登入</a>
-        <button type="submit" class="yahoo"></button>
+        <input type="text" placeholder="Email" ng-model="user" class="user"/>
+        <input type="password" placeholder="Password" ng-model="password" class="pasw"/><img src="/images/customlogin.png" style="margin-top:10px;width:70%;margin-left:15%;margin-bottom:10px" ng-click="href()"/><img src="/images/yahoologin.png" style="width:70%;margin-left:15%;" ng-click="href()"/>
       </div>
     </div>
   </body>
