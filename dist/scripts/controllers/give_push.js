@@ -7,19 +7,29 @@ dont.controller("GivePushCtrl", function($scope, $fileUploader, $http, $location
   }
   $scope.addTag = function(e) {
     var offsetX, offsetY, tagname, timestamp;
+    console.log(e.target);
+    if (!$(e.target).hasClass('photo')) {
+      return;
+    }
     offsetX = e.offsetX / $(e.target).width() * 100;
     offsetY = e.offsetY / $(e.target).height() * 100;
     console.log('GivePushCtrl[offsetX]: ' + offsetX);
     console.log('GivePushCtrl[offsetY]: ' + offsetY);
-    $scope.clicktag = true;
     tagname = prompt("請輸入物件名稱", "衣櫃");
-    timestamp = (new Date()).valueOf();
-    return $scope.tags.push({
-      name: tagname,
-      x: offsetX,
-      y: offsetY,
-      id: timestamp
-    });
+    if (tagname) {
+      timestamp = (new Date()).valueOf();
+      return $scope.tags.push({
+        name: tagname,
+        x: offsetX,
+        y: offsetY,
+        id: timestamp
+      });
+    }
+  };
+  $scope.removeTag = function(e, tag) {
+    var index;
+    index = $scope.tags.indexOf(tag);
+    return $scope.tags.splice(index, 1);
   };
   $scope.finishtag = function() {
     return $http.post("http://api.dont-throw.com/post/update", {

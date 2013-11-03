@@ -3,14 +3,19 @@ dont.controller "GivePushCtrl", ($scope,$fileUploader,$http,$location) ->
   $scope.picPool = []
   $scope.mainPic = ""  if $scope.picPool.length is 0
   $scope.addTag = (e) ->
+    console.log e.target
+    return unless $(e.target).hasClass('photo')
     offsetX = e.offsetX / $(e.target).width() * 100
     offsetY = e.offsetY / $(e.target).height() * 100
     console.log 'GivePushCtrl[offsetX]: '+offsetX
     console.log 'GivePushCtrl[offsetY]: '+offsetY
-    $scope.clicktag = true
     tagname = prompt("請輸入物件名稱", "衣櫃")
-    timestamp = (new Date()).valueOf()
-    $scope.tags.push {name:tagname,x:offsetX, y:offsetY,id:timestamp}
+    if tagname
+      timestamp = (new Date()).valueOf()
+      $scope.tags.push {name:tagname,x:offsetX, y:offsetY, id:timestamp}
+  $scope.removeTag = (e, tag) ->
+    index = $scope.tags.indexOf(tag)
+    $scope.tags.splice(index, 1)
   $scope.finishtag = () ->
     $http.post("http://api.dont-throw.com/post/update",
       data: $scope.tags,
@@ -18,7 +23,6 @@ dont.controller "GivePushCtrl", ($scope,$fileUploader,$http,$location) ->
     ).success (d) ->
       console.log d
       $location.path('/#/give_preview/'+d.postid)
-
 
 
   uploader = $fileUploader.create(
