@@ -2,9 +2,19 @@ html
   body
     #want_list.content
       .tag(ng-repeat="tag in tags",ng-click="select(tag)",ng-class="{'active': tag.selected}")
+        img(src="images/transparent.png")
         .photo
           .wrap-img
             img(src="{{tag.photo}}",style="top:-{{tag.y}}%;left:-{{tag.x}}%")
-        .wrap
+        .love
+        .info
           .name {{tag.name}}
           .position {{tag.position}}m
+      .btnbar
+        .content
+          a.btn(href="#/want_detail")
+            img(src="../images/want_list_btn_a.png")
+          a.btn(href="#/want_detail")
+            img(src="../images/want_list_btn_b.png")
+          a.btn(href="#/want_detail")
+            img(src="../images/want_list_btn_c.png")

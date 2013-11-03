@@ -2,14 +2,18 @@
 <html>
   <body>
     <div id="want_list" class="content">
-      <div ng-repeat="tag in tags" ng-click="select(tag)" ng-class="{'active': tag.selected}" class="tag">
+      <div ng-repeat="tag in tags" ng-click="select(tag)" ng-class="{'active': tag.selected}" class="tag"><img src="images/transparent.png"/>
         <div class="photo">
           <div class="wrap-img"><img src="{{tag.photo}}" style="top:-{{tag.y}}%;left:-{{tag.x}}%"/></div>
         </div>
-        <div class="wrap">
+        <div class="love"></div>
+        <div class="info">
           <div class="name">{{tag.name}}</div>
           <div class="position">{{tag.position}}m</div>
         </div>
+      </div>
+      <div class="btnbar">
+        <div class="content"><a href="#/want_detail" class="btn"><img src="../images/want_list_btn_a.png"/></a><a href="#/want_detail" class="btn"><img src="../images/want_list_btn_b.png"/></a><a href="#/want_detail" class="btn"><img src="../images/want_list_btn_c.png"/></a></div>
       </div>
     </div>
   </body>

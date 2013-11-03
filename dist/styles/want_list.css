@@ -1,6 +1,15 @@
-#want_list .tag{position:relative;width:50%;}
-#want_list .tag .photo{width:110px;height:110px;overflow:hidden;position:relative;}
-#want_list .tag .photo .wrap-img,#want_list .tag .photo img{position:absolute;width:600px;height:600px;top:0;left:0}
+#want_list{background-image:url("../images/want_list_bg.png");-webkit-background-size:contain;-moz-background-size:contain;background-size:contain;}
+#want_list .tag{position:relative;width:80%;margin:0 auto;margin-bottom:60px;}
+#want_list .tag img{width:100%}
+#want_list .tag .photo{width:100%;height:100%;overflow:hidden;position:absolute;left:0;top:0;}
+#want_list .tag .photo .wrap-img,#want_list .tag .photo img{position:absolute;width:1920px;height:1920px;top:0;left:0}
 #want_list .tag .photo .wrap-img{margin-left:50%;margin-top:50%}
-#want_list .tag .wrap{position:absolute;left:120px;top:0}
-#want_list .tag.active{background:#00f}
+#want_list .tag .info{position:absolute;left:0;bottom:-46px;width:100%;height:46px;background:#0e405d;color:#edd92a;}
+#want_list .tag .info .name,#want_list .tag .info .position{position:absolute;top:8px;font-size:24px}
+#want_list .tag .info .name{left:5%}
+#want_list .tag .info .position{right:5%}
+#want_list .tag .love{background-image:url("../images/want_list_love.png");-webkit-background-size:contain;-moz-background-size:contain;background-size:contain;background-repeat:no-repeat;position:absolute;left:50%;top:50%;width:50%;height:50%;margin-left:-25%;margin-top:-25%;display:none}
+#want_list .tag.active .love{display:block}
+#want_list .btnbar{position:fixed;bottom:0;left:0;width:100%;}
+#want_list .btnbar .btn{display:inline-block;width:33%;height:100%;margin:0;padding:0;}
+#want_list .btnbar .btn img{width:100%}

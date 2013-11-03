@@ -1,27 +1,71 @@
 @import 'nib'
 
 #want_list
-  $size=120px
+  background-image: url('../images/want_list_bg.png')
+  background-size: contain
   .tag
     position: relative
-    width: 50%
+    width: 80%
+    margin: 0 auto
+    margin-bottom: 60px
+    img
+      width: 100%
     .photo
-      width: $size - 10px
-      height: $size - 10px
+      width: 100%
+      height: 100%
       overflow: hidden
-      position: relative
+      position: absolute
+      left: 0
+      top: 0
       .wrap-img, img
         position: absolute
-        width: 600px
-        height: 600px
+        width: 640px * 3
+        height: 640px * 3
         top: 0
         left: 0
       .wrap-img
         margin-left: 50%
         margin-top: 50%
-    .wrap
+    .info
       position: absolute
-      left: $size
-      top: 0px
-    &.active
-      background: #00F
+      left: 0
+      bottom: -46px
+      width: 100%
+      height: 46px
+      background: rgb(14, 64, 93)
+      color: rgb(237, 217, 42)
+      .name, .position
+        position: absolute
+        top: 8px
+        font-size: 24px
+      .name
+        left: 5%
+      .position
+        right: 5%
+    .love
+      background-image: url('../images/want_list_love.png')
+      background-size: contain
+      background-repeat: no-repeat
+      position: absolute
+      left: 50%
+      top: 50%
+      width: 50%
+      height: 50%
+      margin-left: -25%
+      margin-top: -25%
+      display: none
+    &.active .love
+      display: block
+  .btnbar
+    position: fixed
+    bottom: 0
+    left: 0
+    width: 100%
+    .btn
+      display: inline-block
+      width: 33%
+      height: 100%
+      margin: 0
+      padding: 0
+      img
+        width: 100%

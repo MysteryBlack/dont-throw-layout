@@ -1,5 +1,5 @@
-body{-webkit-border-radius:5px 5px 5px 5px;border-radius:5px 5px 5px 5px;font-family:Lato,Helvetica,Arial,sans-serif;color:#333;padding:0;margin:0}
-.content{width:100%;max-width:640px;margin:0 auto;position:relative}
+body{-webkit-border-radius:5px 5px 5px 5px;border-radius:5px 5px 5px 5px;font-family:Lato,Helvetica,Arial,sans-serif;color:#333;padding:0;margin:0;background-image:url("../images/bg.png")}
+.content{width:100%;max-width:640px;margin:0 auto;position:relative;-webkit-box-shadow:0 0 16px rgba(0,0,0,0.7);box-shadow:0 0 16px rgba(0,0,0,0.7)}
 img.bg{width:100%}
 #main{margin-top:25mm;}
 .view-home #main{margin-top:0}

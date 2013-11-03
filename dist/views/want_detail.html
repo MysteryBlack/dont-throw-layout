@@ -2,11 +2,14 @@
 <html>
   <body>
     <div id="want_detail" class="content">
-      <div ng-repeat="tag in tags | selected" class="tag"><img src="images/transparent.png"/>
-        <div class="photo">
-          <div class="wrap-img"><img src="{{tag.photo}}" style="top:-{{tag.y}}%;left:-{{tag.x}}%"/></div>
+      <div class="tags">
+        <div ng-repeat="tag in tags | selected" class="tag"><img src="images/transparent.png"/>
+          <div class="photo">
+            <div class="wrap-img"><img src="{{tag.photo}}" style="top:-{{tag.y}}%;left:-{{tag.x}}%"/></div>
+          </div>
         </div>
-      </div><img src="http://maps.googleapis.com/maps/api/staticmap?zoom=16&amp;size=640x240&amp;sensor=false&amp;key=AIzaSyAEwpiQ0Bxihw4luyQ-CwvBj0luSFiyHJQ&amp;center=25.05735,121.61508&amp;markers=color:blue%7Clabel:X%7C25.05735,121.61508"/><a href="#/want_complete" class="submit"><img src="images/want_detail_submit.png"/></a>
+      </div>
+      <div class="map"><img src="http://maps.googleapis.com/maps/api/staticmap?zoom=16&amp;size=640x240&amp;sensor=false&amp;key=AIzaSyAEwpiQ0Bxihw4luyQ-CwvBj0luSFiyHJQ&amp;center=25.05735,121.61508&amp;markers=color:blue%7Clabel:X%7C25.05735,121.61508"/></div><a href="#/want_complete" class="submit"><img src="images/want_detail_submit.png"/></a>
     </div>
   </body>
 </html>

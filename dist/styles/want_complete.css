@@ -1,1 +1,3 @@
-#want_detail{width:100%}
+#want_complete .map{width:96%;margin:0 auto;position:relative}
+#want_complete .icon{-webkit-background-size:contain;-moz-background-size:contain;background-size:contain;background-repeat:no-repeat;background-image:url("../images/want_complete.png");position:absolute;right:10px;bottom:10px;width:30%;height:30%}
+#want_complete .info{position:absolute;left:50%;top:50%;width:40%;margin-left:-20%;padding:10px;margin-top:-16px;text-align:center;background:rgba(255,255,255,0.75);border:2px solid #000;-webkit-border-radius:10px;border-radius:10px}

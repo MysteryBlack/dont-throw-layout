@@ -1,4 +1,7 @@
 html
   body
     #want_complete.content
-      span {{(tags|selected).length}}件物品
+      .map
+        img(src="http://maps.googleapis.com/maps/api/staticmap?zoom=16&size=640x640&sensor=false&key=AIzaSyAEwpiQ0Bxihw4luyQ-CwvBj0luSFiyHJQ&center=25.05735,121.61508&markers=color:blue%7Clabel:X%7C25.05735,121.61508")
+        .icon
+        .info {{(tags|selected).length}}件物品
