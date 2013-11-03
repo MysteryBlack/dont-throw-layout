@@ -3,7 +3,7 @@ html
     #login.content
       img.bg(src="images/login_bg.png",border="0")
       .box
-        input(type="text", placeholder="Email" , ng-model="user")
-        input(type="password", placeholder="Password" , ng-model="password")
-        a(ng-api="(email:email||password:nospace)(restfullogin:/api/rest-auth/nonce||/api/rest-auth/login)" ,href="") 登入
-        button.yahoo(type="submit")
+        input.user(type="text", placeholder="Email" , ng-model="user")
+        input.pasw(type="password", placeholder="Password" , ng-model="password")
+        img(src="/images/customlogin.png",style="margin-top:10px;width:70%;margin-left:15%;margin-bottom:10px",ng-click="href()") 
+        img(src="/images/yahoologin.png",style="width:70%;margin-left:15%;",ng-click="href()") 

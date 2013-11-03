@@ -1,6 +1,10 @@
-dont.controller("LoginCtrl", function($scope) {
+dont.controller("LoginCtrl", function($scope, $location) {
   $scope.items = [];
-  return $scope.limit = 0;
+  $scope.limit = 0;
+  return $scope.href = function() {
+    console.log('23');
+    return $location.path("/choose");
+  };
 });
 
 /*
